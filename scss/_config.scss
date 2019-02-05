@@ -1,0 +1,36 @@
+$primary-color: #444;
+$secondary-color: #1eff0081;
+$show-home-image: true;
+$home-image: url(../img/background.png);
+$background-opacity: 0.8;
+
+// como se fosse uma funcao
+@mixin easeOut{
+
+    // ao colocar o mouse sobre os icones, eh dado um efeito de fade in em 0.8 segundos
+    transition: all 0.8s ease-out;
+}
+
+@mixin background{
+    @if $show-home-image{
+        &#bg-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            // camada que fica a frente da imagem, cobrindo toda a viewport
+            // o after indica que vem depois do elemento body#bg-img
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                // z index -1 para que o texto fique a frente da camada
+                z-index: -1;
+                background: rgba($primary-color,$background-opacity);
+            }
+        }
+    }
+}

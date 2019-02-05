@@ -1,6 +1,82 @@
-$primary-color: #444;
+// importanto a partial que contem as variaveis e funcoes scss
+@import 'config';
+
+// o asterisco serve para todo conteudo da pagina
+* {
+    box-sizing: border-box;
+}
 
 body{
+    @include background();
     background: $primary-color;
     color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // espaco entre as linhas
+    line-height: 1.5;
+}
+
+// headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+    
+    // 1 rem = 16px por padrao do html, 6rem = 6*16 = 96px
+    // &.class representa a classe no h1, poderia ser, h1.lg-heading{} fora do h3
+    &.lg-heading{
+        font-size: 6rem;
+    }
+
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    // estara sempre no topo
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+main{
+    padding: 4rem;
+    height: 100%;
+
+    .icons{
+        margin-top: 1rem;
+
+        a{
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+                // chamando a funcao easeOut
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home{
+        // remove scroll bars
+        overflow: hidden;
+        // vh = viewport height
+        h1{
+            margin-top: 20vh;
+        }
+    }
 }
