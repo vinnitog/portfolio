@@ -34,3 +34,33 @@ $background-opacity: 0.7;
         }
     }
 }
+
+// media query mixins
+
+// conteudo para telas com tamanho maximo de 500px
+@mixin mediaSm{
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+// conteudo para telas com tamanho maximo de 768px
+@mixin mediaMd{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+// conteudo para telas entre 769px e 1170px
+@mixin mediaLg{
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+// conteudo para telas com no minimo 1171px ou maiores
+@mixin mediaXl{
+    @media screen and (min-width: 1171px){
+        @content;
+    }
+}
