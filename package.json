@@ -1,7 +1,7 @@
 {
-  "name": "portifolio",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "portifolio",
+  "description": "portfolio",
   "main": "index.js",
   "homepage": "https://vinnitog.github.io/portfolio/dist",
   "scripts": {
