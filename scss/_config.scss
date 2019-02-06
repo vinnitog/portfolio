@@ -4,7 +4,7 @@ $show-home-image: true;
 $home-image: url(../img/background.png);
 $background-opacity: 0.7;
 
-// como se fosse uma funcao
+// como se fosse uma funcao, mas sem retorno
 @mixin easeOut{
 
     // ao colocar o mouse sobre os icones, eh dado um efeito de fade in em 0.8 segundos
@@ -34,6 +34,22 @@ $background-opacity: 0.7;
         }
     }
 }
+
+
+// essa eh realmente uma funcao
+// funcao para setar a cor do texto
+
+@function set-text-color($color){
+
+    @if(lightness($color) > 40){
+        // retorna preto
+        @return #000;
+    }@else{
+        // retorna branco
+        @return #fff;
+    }
+}
+
 
 // media query mixins
 
