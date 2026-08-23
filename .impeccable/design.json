@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-23T02:14:02.1935168-03:00",
+  "title": "Design System: Portfólio de Vinícius Tognoli",
+  "extensions": {
+    "colorMeta": {
+      "route-green": {
+        "role": "primary",
+        "displayName": "Verde de Rota",
+        "canonical": "#05543d",
+        "tonalRamp": ["oklch(15% 0.09 159)", "oklch(26% 0.09 159)", "oklch(38% 0.09 159)", "oklch(50% 0.09 159)", "oklch(62% 0.09 159)", "oklch(74% 0.09 159)", "oklch(86% 0.09 159)", "oklch(95% 0.09 159)"]
+      },
+      "route-mist": {
+        "role": "primary",
+        "displayName": "Névoa de Rota",
+        "canonical": "#dbe8e3",
+        "tonalRamp": ["oklch(15% 0.02 164)", "oklch(26% 0.02 164)", "oklch(38% 0.02 164)", "oklch(50% 0.02 164)", "oklch(62% 0.02 164)", "oklch(74% 0.02 164)", "oklch(86% 0.02 164)", "oklch(95% 0.02 164)"]
+      },
+      "project-coral": {
+        "role": "secondary",
+        "displayName": "Coral de Projeto",
+        "canonical": "#d95036",
+        "tonalRamp": ["oklch(15% 0.17 30)", "oklch(26% 0.17 30)", "oklch(38% 0.17 30)", "oklch(50% 0.17 30)", "oklch(62% 0.17 30)", "oklch(74% 0.17 30)", "oklch(86% 0.17 30)", "oklch(95% 0.17 30)"]
+      },
+      "project-amber": {
+        "role": "tertiary",
+        "displayName": "Âmbar de Evidência",
+        "canonical": "#956000",
+        "tonalRamp": ["oklch(15% 0.15 70)", "oklch(26% 0.15 70)", "oklch(38% 0.15 70)", "oklch(50% 0.15 70)", "oklch(62% 0.15 70)", "oklch(74% 0.15 70)", "oklch(86% 0.15 70)", "oklch(95% 0.15 70)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel Editorial",
+        "canonical": "#f9f6f5",
+        "tonalRamp": ["oklch(15% 0.006 35)", "oklch(26% 0.006 35)", "oklch(38% 0.006 35)", "oklch(50% 0.006 35)", "oklch(62% 0.006 35)", "oklch(74% 0.006 35)", "oklch(86% 0.006 35)", "oklch(95% 0.006 35)"]
+      },
+      "raised-paper": {
+        "role": "neutral",
+        "displayName": "Papel Elevado",
+        "canonical": "#fffdfb",
+        "tonalRamp": ["oklch(15% 0.006 66)", "oklch(26% 0.006 66)", "oklch(38% 0.006 66)", "oklch(50% 0.006 66)", "oklch(62% 0.006 66)", "oklch(74% 0.006 66)", "oklch(86% 0.006 66)", "oklch(95% 0.006 66)"]
+      },
+      "technical-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Técnica",
+        "canonical": "#07111e",
+        "tonalRamp": ["oklch(15% 0.035 252)", "oklch(26% 0.035 252)", "oklch(38% 0.035 252)", "oklch(50% 0.035 252)", "oklch(62% 0.035 252)", "oklch(74% 0.035 252)", "oklch(86% 0.035 252)", "oklch(95% 0.035 252)"]
+      },
+      "softened-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Suavizada",
+        "canonical": "#42505c",
+        "tonalRamp": ["oklch(15% 0.025 245)", "oklch(26% 0.025 245)", "oklch(38% 0.025 245)", "oklch(50% 0.025 245)", "oklch(62% 0.025 245)", "oklch(74% 0.025 245)", "oklch(86% 0.025 245)", "oklch(95% 0.025 245)"]
+      },
+      "editorial-rule": {
+        "role": "neutral",
+        "displayName": "Regra Editorial",
+        "canonical": "#aab0ae",
+        "tonalRamp": ["oklch(15% 0.01 165)", "oklch(26% 0.01 165)", "oklch(38% 0.01 165)", "oklch(50% 0.01 165)", "oklch(62% 0.01 165)", "oklch(74% 0.01 165)", "oklch(86% 0.01 165)", "oklch(95% 0.01 165)"]
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Papel Noturno",
+        "canonical": "#0f1719",
+        "tonalRamp": ["oklch(15% 0.02 195)", "oklch(26% 0.02 195)", "oklch(38% 0.02 195)", "oklch(50% 0.02 195)", "oklch(62% 0.02 195)", "oklch(74% 0.02 195)", "oklch(86% 0.02 195)", "oklch(95% 0.02 195)"]
+      },
+      "night-raised-paper": {
+        "role": "neutral",
+        "displayName": "Papel Noturno Elevado",
+        "canonical": "#172326",
+        "tonalRamp": ["oklch(15% 0.025 195)", "oklch(26% 0.025 195)", "oklch(38% 0.025 195)", "oklch(50% 0.025 195)", "oklch(62% 0.025 195)", "oklch(74% 0.025 195)", "oklch(86% 0.025 195)", "oklch(95% 0.025 195)"]
+      },
+      "night-technical-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Técnica Noturna",
+        "canonical": "#e8eeec",
+        "tonalRamp": ["oklch(15% 0.015 165)", "oklch(26% 0.015 165)", "oklch(38% 0.015 165)", "oklch(50% 0.015 165)", "oklch(62% 0.015 165)", "oklch(74% 0.015 165)", "oklch(86% 0.015 165)", "oklch(95% 0.015 165)"]
+      },
+      "night-softened-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Suavizada Noturna",
+        "canonical": "#b5c2be",
+        "tonalRamp": ["oklch(15% 0.025 165)", "oklch(26% 0.025 165)", "oklch(38% 0.025 165)", "oklch(50% 0.025 165)", "oklch(62% 0.025 165)", "oklch(74% 0.025 165)", "oklch(86% 0.025 165)", "oklch(95% 0.025 165)"]
+      },
+      "night-route-green": {
+        "role": "primary",
+        "displayName": "Verde de Rota Noturno",
+        "canonical": "#78c9aa",
+        "tonalRamp": ["oklch(15% 0.11 160)", "oklch(26% 0.11 160)", "oklch(38% 0.11 160)", "oklch(50% 0.11 160)", "oklch(62% 0.11 160)", "oklch(74% 0.11 160)", "oklch(86% 0.11 160)", "oklch(95% 0.11 160)"]
+      },
+      "night-route-mist": {
+        "role": "primary",
+        "displayName": "Névoa de Rota Noturna",
+        "canonical": "#29463e",
+        "tonalRamp": ["oklch(15% 0.05 162)", "oklch(26% 0.05 162)", "oklch(38% 0.05 162)", "oklch(50% 0.05 162)", "oklch(62% 0.05 162)", "oklch(74% 0.05 162)", "oklch(86% 0.05 162)", "oklch(95% 0.05 162)"]
+      },
+      "night-project-coral": {
+        "role": "secondary",
+        "displayName": "Coral de Projeto Noturno",
+        "canonical": "#ff8069",
+        "tonalRamp": ["oklch(15% 0.18 30)", "oklch(26% 0.18 30)", "oklch(38% 0.18 30)", "oklch(50% 0.18 30)", "oklch(62% 0.18 30)", "oklch(74% 0.18 30)", "oklch(86% 0.18 30)", "oklch(95% 0.18 30)"]
+      },
+      "night-project-amber": {
+        "role": "tertiary",
+        "displayName": "Âmbar de Evidência Noturno",
+        "canonical": "#e2b86b",
+        "tonalRamp": ["oklch(15% 0.14 80)", "oklch(26% 0.14 80)", "oklch(38% 0.14 80)", "oklch(50% 0.14 80)", "oklch(62% 0.14 80)", "oklch(74% 0.14 80)", "oklch(86% 0.14 80)", "oklch(95% 0.14 80)"]
+      },
+      "night-editorial-rule": {
+        "role": "neutral",
+        "displayName": "Regra Editorial Noturna",
+        "canonical": "#53645f",
+        "tonalRamp": ["oklch(15% 0.025 165)", "oklch(26% 0.025 165)", "oklch(38% 0.025 165)", "oklch(50% 0.025 165)", "oklch(62% 0.025 165)", "oklch(74% 0.025 165)", "oklch(86% 0.025 165)", "oklch(95% 0.025 165)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Resumo de Abertura",
+        "purpose": "Resumo informal visível do primeiro viewport; o h1 correspondente permanece sr-only."
+      },
+      "headline": {
+        "displayName": "Headline Editorial",
+        "purpose": "Títulos de seção e grandes mudanças de assunto."
+      },
+      "title": {
+        "displayName": "Título de Evidência",
+        "purpose": "Cargos, cases e blocos internos de prova."
+      },
+      "body": {
+        "displayName": "Leitura Humana",
+        "purpose": "Explicações, contexto e narrativa contínua."
+      },
+      "label": {
+        "displayName": "Rótulo Técnico",
+        "purpose": "Navegação, nós, metadados e ações compactas."
+      }
+    },
+    "shadows": [
+      {
+        "name": "evidence-structural",
+        "value": "0 16px 35px rgba(7, 17, 30, 0.12)",
+        "purpose": "Eleva o painel contextual conectado ao estágio ativo."
+      },
+      {
+        "name": "evidence-structural-dark",
+        "value": "0 18px 40px rgba(0, 0, 0, 0.38)",
+        "purpose": "Eleva o painel contextual sobre o Papel Noturno."
+      },
+      {
+        "name": "runner-pixel",
+        "value": "drop-shadow(0 4px 3px rgba(0, 0, 0, 0.34))",
+        "purpose": "Separa o sprite pixel art da regra inferior do header."
+      }
+    ],
+    "motion": [
+      {
+        "name": "route-pulse",
+        "value": "4.8s linear infinite",
+        "purpose": "Move um pulso ao longo da pipeline horizontal ou vertical quando movimento é permitido."
+      },
+      {
+        "name": "state-quick",
+        "value": "180ms ease-out",
+        "purpose": "Transições espaciais de hover e opacidade; nunca anima a troca de paleta."
+      },
+      {
+        "name": "nav-underline",
+        "value": "220ms ease-out",
+        "purpose": "Expande a regra ativa sob links de navegação."
+      },
+      {
+        "name": "runner-trail",
+        "value": "100ms ease-out",
+        "purpose": "Revela e recolhe o rastro do personagem durante movimento."
+      },
+      {
+        "name": "runner-frames",
+        "value": "3 frames por incremento de 28px de scroll",
+        "purpose": "Alterna três PNGs conforme o scroll significativo, inclusive em sentido reverso."
+      },
+      {
+        "name": "runner-idle",
+        "value": "160ms",
+        "purpose": "Remove o estado de corrida após o último movimento de scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "route-stack",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação de progressão com preenchimento Verde de Rota.",
+      "html": "<a class=\"ds-button ds-button-primary\" href=\"#\">Explorar projetos <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-button{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.75rem;padding:.75rem 1.25rem;border:1px solid var(--route,#05543d);border-radius:8px;font:750 .9rem/1 var(--body,\"Manrope\",sans-serif);text-decoration:none;overflow-wrap:anywhere;transition:transform 180ms ease-out}.ds-button-primary{color:var(--paper-raised,#fffdfb);background:var(--route,#05543d)}.ds-button-primary:hover{color:var(--paper,#f9f6f5);background:var(--button-hover,#033f2e);transform:translateY(-2px)}.ds-button-primary:active{transform:translateY(0)}.ds-button-primary:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:4px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação externa ou paralela com tratamento contornado.",
+      "html": "<a class=\"ds-button ds-button-secondary\" href=\"#\">GitHub <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-button{display:inline-flex;min-height:3.25rem;align-items:center;justify-content:center;gap:.75rem;padding:.75rem 1.25rem;border:1px solid var(--route,#05543d);border-radius:8px;font:750 .9rem/1 var(--body,\"Manrope\",sans-serif);text-decoration:none;overflow-wrap:anywhere;transition:transform 180ms ease-out}.ds-button-secondary{color:var(--route,#05543d);background:transparent}.ds-button-secondary:hover{color:var(--paper-raised,#fffdfb);background:var(--route,#05543d);transform:translateY(-2px)}.ds-button-secondary:active{transform:translateY(0)}.ds-button-secondary:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Link compacto que revela uma regra verde no hover e no estado atual.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação de exemplo\"><a class=\"ds-nav-link\" href=\"#\">Experiência</a><a class=\"ds-nav-link\" href=\"#\" aria-current=\"true\">Projetos</a><a class=\"ds-nav-link\" href=\"#\">Contato</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:2rem;font-family:var(--body,\"Manrope\",sans-serif)}.ds-nav-link{position:relative;padding:1rem 0;color:var(--ink,#07111e);font-size:.96rem;font-weight:650;text-decoration:none}.ds-nav-link::after{position:absolute;right:0;bottom:.72rem;left:0;height:2px;content:\"\";background:var(--route,#05543d);transform:scaleX(0);transform-origin:right;transition:transform 220ms ease-out}.ds-nav-link:hover::after,.ds-nav-link[aria-current=\"true\"]::after{transform:scaleX(1);transform-origin:left}.ds-nav-link:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:4px}"
+    },
+    {
+      "name": "Route Stage",
+      "kind": "custom",
+      "refersTo": "route-stage",
+      "description": "Etapa da pipeline cujo SVG sem círculo de contêiner é o único marcador; não usa pseudo-dot nem halo.",
+      "html": "<button class=\"ds-route-stage ds-is-active\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-route-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 32 32\"><path d=\"m11 8-7 8 7 8M21 8l7 8-7 8M19 5l-6 22\"></path></svg></span><span class=\"ds-route-label\">Desenvolvimento</span></button>",
+      "css": ".ds-route-stage{position:relative;display:grid;min-width:4.5rem;min-height:6.75rem;place-items:center;gap:.55rem;padding:0;border:0;color:var(--ink,#07111e);background:transparent;font:700 .82rem/1.15 var(--body,\"Manrope\",sans-serif);cursor:pointer}.ds-route-icon{display:grid;width:3.5rem;height:3.5rem;place-items:center;border:0;background:transparent;filter:drop-shadow(0 0 3px var(--paper,#f9f6f5));transition:color 180ms ease-out,transform 180ms ease-out}.ds-route-icon svg{width:1.75rem;fill:none;stroke:var(--route,#05543d);stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7}.ds-route-label{min-height:2.2rem;text-align:center}.ds-route-stage:hover .ds-route-icon,.ds-route-stage.ds-is-active .ds-route-icon{transform:translateY(-.2rem)}.ds-route-stage:hover svg,.ds-route-stage.ds-is-active svg{stroke:var(--amber,#956000)}.ds-route-stage:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:4px}"
+    },
+    {
+      "name": "Evidence Panel",
+      "kind": "card",
+      "refersTo": "evidence-panel",
+      "description": "Painel elevado, único e traduzível que acompanha o nó ativo no eixo horizontal ou no fluxo vertical.",
+      "html": "<aside class=\"ds-evidence\"><p>Desenvolvimento</p><ul><li>Escopo pequeno</li><li>Código limpo</li><li>PWA e arquitetura</li><li>Cenários de borda</li></ul></aside>",
+      "css": ".ds-evidence{position:relative;width:14rem;min-height:11rem;padding:1.15rem 1.25rem;border:1px solid var(--rule,#aab0ae);border-radius:12px;color:var(--ink-soft,#42505c);background:var(--paper-raised,#fffdfb);box-shadow:0 16px 35px rgba(7,17,30,.12);font-family:var(--body,\"Manrope\",sans-serif);overflow-wrap:anywhere}.ds-evidence::before{position:absolute;bottom:100%;left:50%;width:2px;height:4.5rem;content:\"\";background:repeating-linear-gradient(to bottom,var(--route,#05543d) 0 6px,transparent 6px 11px)}.ds-evidence p{margin:0 0 .6rem;color:var(--route,#05543d);font-weight:800}.ds-evidence ul{margin:0;padding:0;list-style:none}.ds-evidence li{position:relative;padding:.23rem 0 .23rem 1rem;font-size:1rem;line-height:1.45}.ds-evidence li::before{position:absolute;top:.72rem;left:0;width:.4rem;height:.4rem;border-radius:50%;content:\"\";background:var(--route,#05543d)}"
+    },
+    {
+      "name": "Pipeline Pulse",
+      "kind": "custom",
+      "refersTo": "route-pulse",
+      "description": "Pulso âmbar decorativo que percorre a pipeline horizontal ou vertical quando movimento é permitido.",
+      "html": "<div class=\"ds-route-track\" aria-hidden=\"true\"><span class=\"ds-route-pulse\"><i></i></span></div>",
+      "css": ".ds-route-track{position:relative;height:3px;overflow:hidden;background:var(--route-soft,#dbe8e3)}.ds-route-pulse{position:absolute;inset:0;transform:translateX(-100%);animation:ds-route-pulse 4.8s linear infinite}.ds-route-pulse i{position:absolute;top:50%;right:0;width:.75rem;height:.75rem;border:2px solid var(--paper,#f9f6f5);border-radius:50%;background:var(--amber,#956000);transform:translateY(-50%)}@keyframes ds-route-pulse{to{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.ds-route-pulse{animation:none}}"
+    },
+    {
+      "name": "Technical Tag",
+      "kind": "chip",
+      "refersTo": "technical-tag",
+      "description": "Etiqueta compacta para uma tecnologia confirmada no case.",
+      "html": "<span class=\"ds-tech-tag\">Playwright</span>",
+      "css": ".ds-tech-tag{display:inline-flex;padding:.45rem .75rem;border:1px solid var(--rule,#aab0ae);border-radius:999px;color:var(--ink,#07111e);background:transparent;font:750 .78rem/1 var(--body,\"Manrope\",sans-serif)}"
+    },
+    {
+      "name": "Project Feature and Ledger",
+      "kind": "custom",
+      "refersTo": "project-feature-ledger",
+      "description": "Um case editorial principal seguido por uma lista compacta de projetos verificáveis, sem repetir cards grandes.",
+      "html": "<section class=\"ds-projects\"><article class=\"ds-project-feature\"><div><p>VerbaJus</p><h3>Cálculos trabalhistas com memória e contexto.</h3></div><a href=\"#\" aria-label=\"Examinar repositório do VerbaJus\">Examinar repositório ↗</a></article><div class=\"ds-project-ledger\" role=\"list\" aria-label=\"Outros projetos selecionados\"><article class=\"ds-project-row\" role=\"listitem\"><h3>TX Raio-X</h3><p>Produto e arquitetura em uma linha verificável.</p><a href=\"#\" aria-label=\"Examinar repositório do TX Raio-X\">Examinar repositório ↗</a></article></div></section>",
+      "css": ".ds-project-feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(17rem,.65fr);gap:clamp(3rem,8vw,8rem);padding:clamp(2.75rem,5vw,4.5rem) 0;border-block:1px solid var(--ink,#07111e)}.ds-project-ledger{border-bottom:1px solid var(--ink,#07111e)}.ds-project-row{display:grid;grid-template-columns:minmax(9rem,.55fr) minmax(0,1.35fr) auto;gap:clamp(1.25rem,3vw,3rem);padding:clamp(1.5rem,2.5vw,2.25rem) 0;border-bottom:1px solid var(--rule,#aab0ae)}@media(max-width:760px){.ds-project-feature,.ds-project-row{grid-template-columns:1fr}}"
+    },
+    {
+      "name": "Scroll Runner",
+      "kind": "custom",
+      "refersTo": "scroll-runner",
+      "description": "Personagem pixel art de três frames 288 × 192 que percorre uma faixa exclusiva na regra inferior do header conforme o scroll, abaixo dos controles.",
+      "html": "<div class=\"ds-scroll-runner ds-is-visible ds-is-running\" aria-hidden=\"true\"><span class=\"ds-scroll-runner-trail\"></span><img class=\"ds-scroll-runner-sprite\" src=\"assets/scroll-runner.png\" alt=\"\" width=\"288\" height=\"192\"></div>",
+      "css": ".ds-header{position:relative;min-height:7rem;padding-bottom:1.75rem}.ds-scroll-runner{position:absolute;z-index:1;bottom:-.18rem;left:0;width:clamp(3.4rem,4.1vw,4.25rem);pointer-events:none;opacity:.36;transform:translate3d(var(--runner-x,0),0,0);transition:opacity 180ms ease-out;will-change:transform}.ds-scroll-runner.ds-is-visible{opacity:.72}.ds-scroll-runner.ds-is-visible.ds-is-running{opacity:.95}.ds-scroll-runner-sprite{position:relative;z-index:2;width:100%;height:auto;filter:drop-shadow(0 4px 3px rgba(0,0,0,.34));image-rendering:pixelated;transform:scaleX(var(--runner-facing,1));transform-origin:center bottom}.ds-scroll-runner-trail{position:absolute;z-index:1;top:66%;right:74%;width:2.2rem;height:2px;opacity:0;background:linear-gradient(90deg,transparent,var(--route,#05543d));transform:scaleX(var(--runner-facing,1));transition:opacity 100ms ease-out}.ds-scroll-runner.ds-is-running .ds-scroll-runner-trail{opacity:.62}@media(max-width:760px){.ds-header{min-height:6rem;padding-bottom:1.35rem}.ds-scroll-runner{bottom:-.15rem;width:3.1rem}}@media(prefers-reduced-motion:reduce){.ds-scroll-runner{display:none}}"
+    },
+    {
+      "name": "Treasure Route Divider",
+      "kind": "custom",
+      "refersTo": "treasure-route-divider",
+      "description": "Caminho curvo e tracejado que atravessa a viewport entre seções e termina em um X âmbar.",
+      "html": "<div class=\"ds-treasure-divider\" aria-hidden=\"true\"><svg viewBox=\"0 0 1200 80\" preserveAspectRatio=\"none\"><path d=\"M0 44 C80 12 130 70 215 42 C275 20 250 4 305 10 C365 17 345 75 420 62 C505 45 500 8 590 25 C675 43 650 76 750 55 C840 35 825 5 920 20 C1010 34 1010 68 1090 48 C1135 37 1160 38 1188 42\"></path></svg><span></span></div>",
+      "css": ".ds-treasure-divider{position:relative;width:100vw;height:5rem;color:var(--route,#05543d)}.ds-treasure-divider svg{width:100%;height:100%;overflow:visible}.ds-treasure-divider path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-dasharray:9 11}.ds-treasure-divider span{position:absolute;right:max(.5rem,1vw);top:50%;width:1.15rem;height:1.15rem;background:linear-gradient(45deg,transparent 42%,var(--amber,#956000) 43% 56%,transparent 57%),linear-gradient(-45deg,transparent 42%,var(--amber,#956000) 43% 56%,transparent 57%)}"
+    },
+    {
+      "name": "Language Switcher",
+      "kind": "custom",
+      "refersTo": "language-switcher",
+      "description": "Controle segmentado PT/EN com estado pressionado, alvos táteis seguros e preferência persistente.",
+      "html": "<div class=\"ds-language-switcher\" role=\"group\" aria-label=\"Selecionar idioma\"><button type=\"button\" aria-pressed=\"true\" aria-label=\"Usar português do Brasil\">PT</button><span aria-hidden=\"true\">/</span><button type=\"button\" aria-pressed=\"false\" aria-label=\"Usar inglês americano\">EN</button></div>",
+      "css": ".ds-language-switcher{display:flex;min-height:2.8rem;align-items:center;padding:.2rem .3rem;border:1px solid var(--rule,#aab0ae);border-radius:8px;background:var(--paper-raised,#fffdfb);font-family:var(--body,\"Manrope\",sans-serif)}.ds-language-switcher button{display:grid;min-width:2.75rem;min-height:2.75rem;place-items:center;padding:0;border:0;border-radius:5px;color:var(--ink-soft,#42505c);background:transparent;font:750 .78rem/1 var(--body,\"Manrope\",sans-serif);cursor:pointer}.ds-language-switcher button[aria-pressed=\"true\"]{color:var(--route,#05543d);background:var(--route-soft,#dbe8e3)}.ds-language-switcher button:hover{color:var(--ink,#07111e)}.ds-language-switcher button:active{color:var(--route,#05543d)}.ds-language-switcher button:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:2px}.ds-language-switcher>span{color:var(--rule,#aab0ae);font-size:.75rem}"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "button",
+      "refersTo": "theme-toggle",
+      "description": "Alternador circular sol/lua: dark é o padrão, light é opcional e a paleta troca instantaneamente.",
+      "html": "<button class=\"ds-theme-toggle\" type=\"button\" aria-label=\"Ativar tema claro\" aria-pressed=\"true\"><svg class=\"ds-theme-icon ds-theme-sun\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"3.5\"></circle><path d=\"M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42\"></path></svg><svg class=\"ds-theme-icon ds-theme-moon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z\"></path></svg></button>",
+      "css": ".ds-theme-toggle{display:grid;width:2.8rem;height:2.8rem;place-items:center;padding:0;border:1px solid var(--rule,#aab0ae);border-radius:50%;color:var(--route,#05543d);background:var(--paper-raised,#fffdfb);cursor:pointer}.ds-theme-toggle:hover{color:var(--ink,#07111e);border-color:var(--route,#05543d)}.ds-theme-toggle:active{color:var(--route,#05543d)}.ds-theme-toggle:focus-visible{outline:3px solid var(--amber,#956000);outline-offset:4px}.ds-theme-icon{width:1.25rem;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}.ds-theme-moon,.ds-theme-toggle[aria-pressed=\"true\"] .ds-theme-sun{display:none}.ds-theme-toggle[aria-pressed=\"true\"] .ds-theme-moon{display:block}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Mapa de Evidências",
+    "overview": "O Mapa de Evidências trata o portfólio como um dossiê editorial percorrível: a qualidade nasce em uma rota contínua, atravessa as camadas técnicas e desemboca em trabalho verificável. A interface é clara e arejada, mas não neutra; linhas, ícones técnicos, regras e recortes fazem a estrutura carregar a personalidade.\n\nA voz visual é editorial técnica, precisa e humana, com ludicidade contida. A densidade alterna uma abertura dominante com pausas generosas e seções de prova ritmadas por regras finas. VerbaJus lidera como case principal; os demais projetos formam um ledger compacto, evitando tanto a frieza de um dashboard quanto a repetição de uma grade de cards genéricos.\n\nNome e avatar funcionam como assinatura discreta. Um resumo informal abre a conversa, a rota organiza as camadas e os projetos lideram a prova; o `h1` existe para estrutura e leitores de tela, não como peça visual. O scroll runner pixel art adiciona presença autoral ao progresso sem subir acima do conteúdo.",
+    "keyCharacteristics": [
+      "Hierarquia conduzida por proposta, rota técnica e projetos verificáveis.",
+      "Campo noturno por padrão, papel quente opcional e verde de rota como eixo persistente.",
+      "Geometria editorial de rotas curvas tracejadas, ícones técnicos sem círculo e um X terminal.",
+      "Elevação estrutural reservada ao painel único de evidências.",
+      "Movimento breve, controlado por scroll e integralmente removível.",
+      "Preferências bilíngues e de tema tratadas como parte persistente da experiência, não como decoração do cabeçalho."
+    ],
+    "rules": [
+      {
+        "name": "The Route Owns Attention Rule",
+        "body": "O verde de rota conduz interação e estrutura; ele não vira preenchimento decorativo em grandes áreas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Project Accent Rule",
+        "body": "Âmbar comunica foco, progresso ou destino; coral só entra com uma evidência visual aprovada. Nenhum dos dois substitui o Verde de Rota nem cria categorias artificiais entre projetos.",
+        "section": "colors"
+      },
+      {
+        "name": "The Semantic Theme Rule",
+        "body": "O tema escuro remapeia papéis, não inverte a página: cada superfície, tinta, regra, rota e acento recebe seu equivalente noturno explícito, sem filtros globais nem perda da assinatura editorial.",
+        "section": "colors"
+      },
+      {
+        "name": "The Instant Palette Rule",
+        "body": "A troca entre dark e light é imediata: cores, fundos, bordas e sombras não recebem transição. Movimento continua reservado a relações espaciais, navegação e ao scroll runner.",
+        "section": "colors"
+      },
+      {
+        "name": "The Proposition Before Identity Rule",
+        "body": "O resumo informal, a rota e as evidências conduzem a abertura; nome, avatar e metadados pessoais permanecem compactos. O único `h1` é `.sr-only`, traduzível e sem duplicação visual.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bilingual Fit Rule",
+        "body": "Português do Brasil e inglês americano têm a mesma autoridade visual. Títulos podem rebalancear linhas, enquanto botões, destinos e evidências usam `overflow-wrap: anywhere` e nunca dependem de uma largura rígida que corte a tradução.",
+        "section": "typography"
+      },
+      {
+        "name": "The Expansion Without Compression Rule",
+        "body": "Texto traduzido pode aumentar a altura do componente, mas não pode reduzir alvos táteis, escapar do contêiner ou ser truncado para preservar uma composição fixa.",
+        "section": "layout"
+      },
+      {
+        "name": "The Structural Lift Rule",
+        "body": "Uma sombra deve explicar hierarquia, seleção ou conexão; superfícies comuns continuam planas.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Preference Before Paint Rule",
+        "body": "Tema e idioma persistidos são aplicados antes da pintura sempre que o armazenamento estiver disponível; falha de persistência nunca bloqueia conteúdo ou controles.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve a pipeline de oito etapas como relação legível entre workflow e evidências.",
+      "Do use tipografia de display para proposições e títulos, mantendo corpo e controles em Manrope.",
+      "Do reserve sombras para evidência ativa ou outro papel estrutural equivalente.",
+      "Do keep estados de foco visíveis, alvos táteis seguros e todo o conteúdo estático sob `prefers-reduced-motion`.",
+      "Do let conteúdo real, tecnologias confirmadas e links verificáveis liderarem a composição.",
+      "Do remap todos os papéis semânticos no tema escuro, incluindo superfícies, tinta, rota, acentos, regras, sombras e `theme-color`.",
+      "Do preserve preferências de PT/EN e claro/escuro sem tornar `localStorage` uma dependência para usar o portfólio.",
+      "Do test traduções, palavras técnicas e zoom com `overflow-wrap: anywhere` nos controles e evidências suscetíveis a expansão.",
+      "Do keep o painel de evidências único, traduzido e fisicamente associado ao nó ativo em desktop e mobile.",
+      "Do apply dark como padrão e trocar a paleta instantaneamente, preservando light apenas como preferência explícita.",
+      "Do keep o `h1` semanticamente disponível em `.sr-only` e deixar o resumo informal conduzir o primeiro viewport.",
+      "Do keep o wordmark, as âncoras internas do menu e ‘Voltar ao início’ no documento atual, restaurar foco visível no retorno e reservar nova aba segura para destinos externos.",
+      "Do keep VerbaJus como único destaque e os outros cinco projetos em um ledger compacto com nomes acessíveis específicos.",
+      "Do keep o runner na faixa exclusiva da regra inferior do header, limitado à largura do cabeçalho e alternando três frames conforme o scroll."
+    ],
+    "donts": [
+      "Don't turn o sistema em dashboard, bento grid ou coleção de cards idênticos.",
+      "Don't let nome, avatar ou ornamentação competir com resumo, rota, camadas e projetos.",
+      "Don't invent métricas, selos, status, depoimentos ou evidências para preencher espaço.",
+      "Don't use emoji, ícones de estilos misturados ou grandes massas de coral e âmbar.",
+      "Don't add sombra a superfícies comuns quando regra, espaço ou contraste tonal resolvem a hierarquia.",
+      "Don't invert, dessaturate ou filtrar a interface inteira para simular tema escuro.",
+      "Don't truncate traduções ou encolher controles abaixo do alvo tátil para preservar uma linha.",
+      "Don't duplicate painéis de evidência por etapa; um único painel acompanha a seleção e mantém `aria-live` coerente.",
+      "Don't reintroduce seção Sobre, Experience Rail, pseudo-dots ou halo nos Route Stages.",
+      "Don't animate cores, fundos, bordas ou sombras durante a troca de tema.",
+      "Don't fix o runner no viewport, deixá-lo sair do header ou permitir que ele capture ponteiro."
+    ]
+  }
+}

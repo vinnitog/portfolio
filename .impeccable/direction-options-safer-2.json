@@ -1,0 +1,56 @@
+{
+  "title": "Safer hand — clareza profissional com identidade",
+  "question": "Qual destas novas direções mais seguras deve orientar o portfólio sem perder personalidade?",
+  "options": [
+    {
+      "id": "safer-architecture-blueprint",
+      "label": "Arquitetura em Camadas",
+      "kicker": "SAFER HAND",
+      "lineage": "blueprints de arquitetura de software e diagramas C4",
+      "thesis": "O portfólio demonstra qualidade end-to-end como uma arquitetura clara: cada camada tem função, evidência e conexão com o produto.",
+      "palette": ["#F7F9F7", "#142532", "#2F6B5F", "#4C88A3", "#DCE7E2"],
+      "materials": ["papel técnico claro", "linhas de arquitetura", "rótulos editoriais"],
+      "viewport": "Headline e avatar formam o núcleo humano; ao lado, quatro planos limpos — Database, Backend, APIs e Frontend — conectam experiência e cases em uma leitura imediata.",
+      "risk": "Pode ficar corporativo demais se os diagramas substituírem a narrativa pessoal.",
+      "comp": ".impeccable/mocks/decision/safer-architecture-blueprint.png"
+    },
+    {
+      "id": "safer-quality-dossier",
+      "label": "Dossiê de Qualidade",
+      "kicker": "SAFER HAND",
+      "lineage": "case studies editoriais, relatórios de auditoria e capas de publicações técnicas",
+      "thesis": "Cada projeto é apresentado como uma conclusão sustentada por contexto, investigação, automação e resultado verificável.",
+      "palette": ["#FBFAF6", "#18232D", "#35695E", "#B86B4B", "#D9D4C7"],
+      "materials": ["papel editorial", "tipografia de relatório", "marcas de revisão"],
+      "viewport": "Uma capa editorial divide retrato e posicionamento; um sumário compacto antecipa Experiência, Método, TX Raio-X e RDP Pro com marcas de evidência discretas.",
+      "risk": "A linguagem de relatório pode parecer estática se a navegação não tiver ritmo e resposta tátil.",
+      "comp": ".impeccable/mocks/decision/safer-quality-dossier.png"
+    },
+    {
+      "id": "safer-delivery-console",
+      "label": "Console de Entregas",
+      "kicker": "SAFER HAND",
+      "lineage": "interfaces de developer tools, monitores de CI e painéis de produto",
+      "thesis": "A trajetória aparece como um sistema em execução: automações, IA e validações convergem para entregas mais seguras.",
+      "palette": ["#0F1B22", "#EAF1EE", "#4BC29A", "#E7B55D", "#27404B"],
+      "materials": ["painel fosco", "status semântico", "monoespaçada de apoio"],
+      "viewport": "Avatar e headline dominam a esquerda; uma faixa viva e muito limpa mostra Ricochet360, automação, IA e dois projetos como execuções concluídas, sem transformar a página em dashboard.",
+      "risk": "A estética de ferramenta pode esfriar a presença pessoal se o retrato e a narrativa perderem protagonismo.",
+      "comp": ".impeccable/mocks/decision/safer-delivery-console.png"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "label": "Clássico de referência",
+    "thesis": "A clareza narrativa de Brittany Chiang, o refinamento técnico de Lee Robinson e a interação cuidadosa de Josh W. Comeau em uma composição autoral e direta.",
+    "palette": ["#FAFAF8", "#15232D", "#2D6A5B", "#91B8AD"],
+    "materials": ["grid editorial amplo", "retrato profissional", "microinterações funcionais"],
+    "viewport": "Navegação mínima, proposta profissional e dois CTAs à esquerda, avatar grande à direita; experiência e projetos entram imediatamente abaixo com hierarquia impecável.",
+    "risk": "É extremamente legível e confiável, mas depende do acabamento para não se confundir com outros portfólios de tecnologia.",
+    "comp": ".impeccable/mocks/decision/safer-classic-reference.png",
+    "hero": "https://brittanychiang.com/"
+  },
+  "steer": true
+}

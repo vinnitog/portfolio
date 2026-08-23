@@ -1,0 +1,105 @@
+{
+  "title": "Escolha o mundo visual do portfólio",
+  "question": "Qual linguagem melhor representa qualidade end-to-end com senioridade, clareza e personalidade?",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Registro em Camadas",
+      "kicker": "THE ROLL",
+      "lineage": "provas de impressão, folhas de acetato e marcas de registro",
+      "thesis": "Cada entrega só fica completa quando dados, backend, APIs e interface se alinham no mesmo registro.",
+      "palette": ["#101828", "#F4F5EF", "#26A6A1", "#D95C77", "#C8E64A"],
+      "materials": ["acetato translúcido", "tinta de registro", "papel técnico"],
+      "viewport": "A foto de Vinícius ocupa uma lente vertical; quatro lâminas rotuladas atravessam a cena e se alinham ao mover o ponteiro, enquanto a headline e os CTAs permanecem nítidos à esquerda.",
+      "risk": "A referência gráfica exige rótulos diretos para não parecer um portfólio de design.",
+      "raised": [
+        {"from": "Cidade em Corte", "raise": "Toda camada relevante fica visível e rotulada, sem esconder o mecanismo em cards genéricos."},
+        {"from": "Festival Tipográfico", "raise": "A hierarquia é carregada por escala e ritmo, não por uma coleção de caixas."},
+        {"from": "Data Sublime", "raise": "O movimento tem modo reduzido e os estados continuam legíveis sem cor."}
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "Sala de Evidências",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "war rooms, mapas de incidentes e relatórios de validação",
+      "thesis": "O portfólio se comporta como uma investigação bem conduzida: cada afirmação aponta para uma evidência real.",
+      "palette": ["#F7F5EE", "#15202B", "#2255D6", "#F06A45", "#9DB4A0"],
+      "materials": ["quadro modular", "anotações de campo", "carimbos de status"],
+      "viewport": "Uma prancha assimétrica conecta foto, experiência, stack e dois cases por uma única linha de rastreabilidade, com a proposta de valor ocupando o maior bloco.",
+      "risk": "É a direção mais familiar para o universo de QA e pode se aproximar de um dashboard se a composição perder escala.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-busytown",
+      "label": "Produto em Corte",
+      "verdict": "competitive",
+      "lineage": "cidades ilustradas em corte transversal",
+      "thesis": "Um produto digital aberto ao meio mostra Vinícius validando cada andar, do banco à interface.",
+      "palette": ["#FFF8E8", "#243247", "#E2664E", "#E5B93F", "#5C9B74"],
+      "materials": ["gouache editorial", "traço técnico", "legendas impressas"],
+      "viewport": "Uma arquitetura contínua em quatro níveis mostra tarefas em andamento e revela detalhes técnicos ao foco ou toque.",
+      "case": "Ganha em clareza e ludicidade; perde em identificação com senioridade se a ilustração ficar infantil.",
+      "risk": "Exige direção editorial adulta para não parecer conteúdo educacional infantil.",
+      "comp": ".impeccable/mocks/decision/challenger-busytown.png",
+      "hero": "https://impeccable.style/worlds/cards/graphic-worlds-publishing-busytown-cross-section-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/graphic-worlds-publishing-busytown-cross-section.webp"
+    },
+    {
+      "id": "challenger-data",
+      "label": "Campo de Dados",
+      "verdict": "declined",
+      "lineage": "instalações audiovisuais de dados em preto e branco",
+      "thesis": "A precisão vira paisagem: traces, colunas e sinais revelam o comportamento de cada entrega.",
+      "palette": ["#000000", "#FFFFFF"],
+      "materials": ["barras pixel-perfect", "regras finas", "números tabulares"],
+      "viewport": "Um campo generativo reage ao ponteiro enquanto a proposta profissional permanece recortada em alto contraste.",
+      "case": "Identifica tecnologia imediatamente, mas sacrifica calor humano e leitura confortável.",
+      "kept": "Movimento generativo sempre opcional e controlado.",
+      "risk": "Alto contraste contínuo pode cansar e competir com o conteúdo.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp"
+    },
+    {
+      "id": "challenger-canopy",
+      "label": "Contraponto Translúcido",
+      "verdict": "declined",
+      "lineage": "faixas de seda colorida cruzando um pátio claro",
+      "thesis": "Camadas independentes formam acordes de qualidade quando trabalham em conjunto.",
+      "palette": ["#F8F4E8", "#243B80", "#A93848", "#D7A820"],
+      "materials": ["seda translúcida", "luz natural", "sobreposição cromática"],
+      "viewport": "Faixas horizontais cruzam a foto e os textos, criando novas cores nos pontos de interseção.",
+      "case": "É sofisticado e interativo, porém explica menos sobre QA sem apoio verbal pesado.",
+      "kept": "Sobreposição deve representar estado conjunto, não ser decoração.",
+      "risk": "Pode parecer um portfólio artístico antes de parecer engenharia de qualidade.",
+      "hero": "https://impeccable.style/worlds/cards/generative-art-computational-color-chord-counterpoint-hero.webp"
+    },
+    {
+      "id": "challenger-lineup",
+      "label": "Lineup de Competências",
+      "verdict": "declined",
+      "lineage": "cartazes de festival com hierarquia puramente tipográfica",
+      "thesis": "Experiência, competências e cases ganham importância apenas por escala e ritmo.",
+      "palette": ["#245B4C", "#F5E84B"],
+      "materials": ["tinta chapada", "tipo condensado", "papel de cartaz"],
+      "viewport": "A headline ocupa a largura total e se desdobra em uma composição responsiva de habilidades e projetos.",
+      "case": "Comunica hierarquia muito bem, mas não demonstra a ideia end-to-end.",
+      "kept": "Uma família tipográfica forte pode carregar a composição sem excesso de chrome.",
+      "risk": "Pode reduzir uma trajetória complexa a uma lista de palavras-chave.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-festival-lineup-poster-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "label": "Portfólio tech clássico",
+    "thesis": "Hero, sobre, stack, cards de projetos e contato executados com rigor e acabamento.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["grid clean", "cards modulares", "fotografia profissional"],
+    "viewport": "Foto à direita, apresentação e dois CTAs à esquerda, navegação superior e seções lineares abaixo.",
+    "risk": "É reconhecível e eficiente, mas pouco diferenciável por definição.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

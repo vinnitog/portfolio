@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22",
+  "sources": [
+    {
+      "repository": "goul4rt/lgpd-skills",
+      "url": "https://github.com/goul4rt/lgpd-skills",
+      "commit": "d85d79abeeb37cb99fc0785e735a9ca790698a77",
+      "license": "MIT",
+      "skills": [
+        "lgpd-anonymization",
+        "lgpd-audit",
+        "lgpd-audit-logging",
+        "lgpd-consent-schema",
+        "lgpd-data-mapping",
+        "lgpd-dpa",
+        "lgpd-dpo-encarregado",
+        "lgpd-dsar",
+        "lgpd-eca-digital-minors",
+        "lgpd-encryption-keys",
+        "lgpd-incident-response",
+        "lgpd-international-transfer",
+        "lgpd-legacy-retrofit",
+        "lgpd-legal-basis",
+        "lgpd-privacy-policy",
+        "lgpd-retention-erasure",
+        "lgpd-ripd",
+        "lgpd-ropa",
+        "lgpd-vendor-audit"
+      ]
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "commit": "56f44523f76efdcec813e67b38ee550e49b16f48",
+      "license": "Apache-2.0",
+      "skills": ["impeccable"]
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "url": "https://github.com/phuryn/pm-skills",
+      "commit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "license": "MIT",
+      "skills": [
+        "brainstorm-ideas-existing",
+        "brainstorm-ideas-new",
+        "business-model",
+        "monetization-strategy",
+        "pricing-strategy"
+      ]
+    }
+  ]
+}

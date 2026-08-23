@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" id="theme-color" content="#0f1719">
+  <meta name="description" content="Portfólio de Vinícius Tognoli, QA Engineer especializado em automação, IA e qualidade end-to-end.">
+  <meta property="og:title" content="Vinícius Tognoli — QA Engineer">
+  <meta property="og:description" content="Test Automation, IA e qualidade end-to-end: Database, Backend, APIs e Frontend.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vinnitog.github.io/portfolio/">
+  <meta property="og:image" content="https://vinnitog.github.io/portfolio/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Qualidade que conecta Database, Backend, APIs e Frontend — portfólio de Vinícius Tognoli.">
+  <title>Vinícius Tognoli — QA Engineer</title>
+  <link rel="canonical" href="https://vinnitog.github.io/portfolio/">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("portfolio_theme") === "light" ? "light" : "dark";
+      if (localStorage.getItem("portfolio_language") === "en") document.documentElement.lang = "en-US";
+    } catch (_) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!--
+  THESIS: Qualidade é uma rota contínua entre camadas; recusa o hero autobiográfico e a coleção genérica de cards.
+  OWN-WORLD: Papel editorial #F9F6F5, tinta #07111E, rota #05543D, regras finas, nós técnicos e tabs de projeto recortadas.
+  STORY: O visitante entende a atuação end-to-end, inspeciona evidências por camada, conhece a trajetória e abre um case ou perfil real.
+  FIRST VIEWPORT: O resumo profissional domina o alto; a rota apresenta o fluxo completo de projeto e o corredor reage ao scroll na linha do menu.
+  FORM: Rota de Evidências revisada, segunda de três composições, seed 19c88f06.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+  -->
+  <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#inicio" aria-label="Vinícius Tognoli — início" data-i18n-aria-label="identity.home">Vinícius Tognoli</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Abrir navegação</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal" data-i18n-aria-label="nav.label">
+      <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+      <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+      <a href="#contato" data-i18n="nav.contact">Contato</a>
+      <a class="identity-chip" href="https://www.linkedin.com/in/vin%C3%ADcius-tognoli-8b028765/" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn de Vinícius Tognoli" data-i18n-aria-label="identity.linkedin">
+        <img src="assets/avatar-vinicius-128.jpg" alt="" width="48" height="48">
+      </a>
+      <div class="header-controls">
+        <div class="language-switcher" role="group" aria-label="Selecionar idioma" data-i18n-aria-label="controls.language">
+          <button type="button" data-language="pt" aria-pressed="true" aria-label="Usar português do Brasil">PT</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-language="en" aria-pressed="false" aria-label="Usar inglês americano">EN</button>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Ativar tema claro" aria-pressed="true">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg>
+        </button>
+      </div>
+    </nav>
+    <div class="scroll-runner" data-scroll-runner aria-hidden="true">
+      <span class="scroll-runner__trail"></span>
+      <img class="scroll-runner__sprite" src="assets/scroll-runner.png" alt="" width="288" height="192" decoding="async" fetchpriority="low">
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 class="sr-only" id="hero-title" data-i18n="hero.title">Minha trajetória em qualidade e desenvolvimento</h1>
+        <p class="hero-summary" data-i18n="hero.summary">Há mais de 10 anos eu trabalho no encontro entre qualidade e desenvolvimento. Desde 2019, na Ricochet360, investigo regras, dados, APIs e interfaces — e atualmente uso automação, bots e IA para transformar problemas complexos em entregas mais seguras.</p>
+      </div>
+
+      <div class="route-map" data-route-map aria-labelledby="route-title">
+        <h2 class="route-heading" id="route-title" data-i18n="route.label">Meu fluxo de projeto, do contexto à entrega</h2>
+        <p class="route-intro" data-i18n="route.summary">Cada parada abre as evidências e cuidados que aplico antes de avançar.</p>
+
+        <div class="route-journey">
+          <div class="route-track" aria-hidden="true">
+            <span class="route-pulse-track"><i></i></span>
+          </div>
+          <div class="route-stages">
+        <button class="route-node is-active" type="button" style="--node-x: 11%" data-stage="discovery" aria-pressed="true" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><circle cx="14" cy="14" r="7"></circle><path d="m19 19 7 7M14 10v8M10 14h8"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.discovery">Descoberta</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 22%" data-stage="privacy" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M16 4 26 8v7c0 6-4 10-10 13C10 25 6 21 6 15V8l10-4Z"></path><path d="m11 16 3 3 7-8"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.privacy">Privacidade</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 33%" data-stage="development" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="m11 8-7 8 7 8M21 8l7 8-7 8M19 5l-6 22"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.development">Desenvolvimento</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 44%" data-stage="design" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="m6 24 2-7L22 3l7 7-14 14-7 2-2-2Z"></path><path d="m19 6 7 7M8 17l7 7"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.design">UI/UX</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 56%" data-stage="review" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16Z"></path><circle cx="16" cy="16" r="3"></circle></svg>
+          </span>
+          <span class="route-label" data-i18n="route.review">Code Review</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 67%" data-stage="quality" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><rect x="7" y="4" width="18" height="24" rx="2"></rect><path d="m11 11 2 2 4-5M11 19l2 2 4-5M20 11h2M20 19h2"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.quality">Estratégia QA</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 78%" data-stage="automation" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><rect x="6" y="9" width="20" height="17" rx="3"></rect><path d="M16 4v5M12 16h.1M20 16h.1M11 21h10"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.automation">Automação</span>
+        </button>
+
+        <button class="route-node" type="button" style="--node-x: 89%" data-stage="delivery" aria-pressed="false" aria-controls="stage-evidence">
+          <span class="route-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M5 16h19M18 9l7 7-7 7"></path><path d="M7 8v16"></path></svg>
+          </span>
+          <span class="route-label" data-i18n="route.delivery">Entrega</span>
+        </button>
+          </div>
+        </div>
+
+        <aside class="stage-evidence" id="stage-evidence" aria-live="polite">
+          <p id="evidence-title">Descoberta</p>
+          <ul id="evidence-list">
+            <li>Objetivo, público e contexto</li>
+            <li>Requisitos e riscos</li>
+            <li>Stack e limites</li>
+            <li>Escopo verificável</li>
+          </ul>
+        </aside>
+      </div>
+
+    </section>
+
+    <section class="section section--experience" id="experiencia" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <h2 id="experience-title" data-i18n="experience.title">Qualidade como prática de engenharia.</h2>
+      </div>
+      <div class="experience-layout">
+        <div class="role-summary">
+          <p>QA Engineer</p>
+          <h3>Test Automation &amp; AI</h3>
+          <p data-i18n="experience.roleSummary">Validação end-to-end de produtos, cobrindo banco de dados, backend, APIs, integrações e frontend.</p>
+        </div>
+        <dl class="work-streams">
+          <div>
+            <dt data-i18n="experience.investigate">Investigar</dt>
+            <dd data-i18n="experience.investigateBody">Falhas em dados, regras de negócio, integrações e interfaces.</dd>
+          </div>
+          <div>
+            <dt data-i18n="experience.automate">Automatizar</dt>
+            <dd data-i18n="experience.automateBody">Testes, bots e ferramentas que reduzem trabalho repetitivo e ampliam a cobertura.</dd>
+          </div>
+          <div>
+            <dt data-i18n="experience.anticipate">Antecipar</dt>
+            <dd data-i18n="experience.anticipateBody">Cenários, critérios de aceitação e riscos antes de a entrega chegar à produção.</dd>
+          </div>
+          <div>
+            <dt data-i18n="experience.collaborate">Colaborar</dt>
+            <dd data-i18n="experience.collaborateBody">Desenvolvimento e produto alinhados durante todo o ciclo de entrega.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section--method" aria-labelledby="method-title">
+      <div class="section-heading">
+        <h2 id="method-title" data-i18n="method.title">Do requisito à evidência.</h2>
+        <p data-i18n="method.summary">Uma sequência simples para reduzir incerteza sem transformar qualidade em uma etapa isolada.</p>
+      </div>
+      <ol class="method-route">
+        <li><strong data-i18n="method.understand">Entender</strong><span data-i18n="method.understandBody">Contexto, regra de negócio e risco.</span></li>
+        <li><strong data-i18n="method.model">Modelar</strong><span data-i18n="method.modelBody">Cenários, dados e critérios testáveis.</span></li>
+        <li><strong data-i18n="method.validate">Validar</strong><span data-i18n="method.validateBody">Camadas, integrações e experiência real.</span></li>
+        <li><strong data-i18n="method.automate">Automatizar</strong><span data-i18n="method.automateBody">O que precisa continuar verdadeiro.</span></li>
+      </ol>
+    </section>
+
+    <section class="section section--skills" aria-labelledby="skills-title">
+      <div class="section-heading section-heading--split">
+        <h2 id="skills-title" data-i18n="skills.title">Ferramentas a serviço da investigação.</h2>
+        <p data-i18n="skills.summary">A stack muda. O compromisso com rastreabilidade, segurança e clareza permanece.</p>
+      </div>
+      <div class="skill-lines">
+        <div><h3 data-i18n="skills.quality">Qualidade</h3><p>Test Automation · Quality Assurance · API Testing · End-to-End Testing · Backend Testing · Front-End Testing · Database Testing</p></div>
+        <div><h3 data-i18n="skills.development">Desenvolvimento</h3><p>JavaScript · TypeScript · Python · Progressive Web Apps · Edge Functions · Bots · Developer Tools</p></div>
+        <div><h3 data-i18n="skills.data">Dados</h3><p data-i18n="skills.dataItems">SQL · PostgreSQL · Supabase · RLS · Autenticação · Integrações</p></div>
+        <div><h3 data-i18n="skills.delivery">Entrega</h3><p data-i18n="skills.deliveryItems">Playwright · GitHub Actions · Automação de pipelines · Segurança · IA aplicada ao desenvolvimento e QA</p></div>
+      </div>
+    </section>
+
+    <section class="section section--projects" id="projetos" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title" data-i18n="projects.title">Projetos que colocam o método em prática.</h2>
+        <p data-i18n="projects.summary">Um case principal e um índice direto de produtos, ferramentas e experimentos que já transformei em software.</p>
+      </div>
+
+      <article class="project-feature">
+        <div class="project-feature__copy">
+          <p class="project-name">VerbaJus</p>
+          <h3 data-i18n="projects.verbaTitle">Cálculos trabalhistas com memória, casos e contexto jurídico.</h3>
+          <p data-i18n="projects.verbaBody">PWA de apoio profissional com autenticação, casos protegidos no Supabase, memória por rubrica, 30 modelos explicados em glossário e assinaturas via Stripe.</p>
+        </div>
+        <div class="project-feature__aside">
+          <p class="project-status"><strong data-i18n="projects.featureLabel">Case principal</strong><span data-i18n="projects.ready">Pronto para uso</span></p>
+          <p class="project-stack">PWA · Supabase · Stripe · Edge Functions · Sentry</p>
+          <a class="project-link" href="https://github.com/vinnitog/VerbaJus" target="_blank" rel="noreferrer" aria-label="Examinar repositório do VerbaJus" data-i18n-aria-label="projects.verbaRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <div class="project-ledger" role="list" aria-label="Outros projetos selecionados" data-i18n-aria-label="projects.ledgerLabel">
+        <article class="project-row" role="listitem">
+          <h3>TX Raio-X</h3>
+          <p data-i18n="projects.txBody">PWA com autenticação via Supabase, ledger de créditos, Edge Functions, Mercado Pago em ambiente de teste, controles de segurança e automação com Playwright.</p>
+          <p class="project-stack">PWA · Supabase · Blockchain · Playwright</p>
+          <a class="project-link" href="https://github.com/vinnitog/TX-Raio-X" target="_blank" rel="noreferrer" aria-label="Examinar repositório do TX Raio-X" data-i18n-aria-label="projects.txRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-row" role="listitem">
+          <h3>RDP Pro</h3>
+          <p data-i18n="projects.rdpBody">PWA para Registro de Pensamentos em TCC, com experiências distintas para paciente e psicólogo, convites, autenticação, RLS, Edge Functions e testes.</p>
+          <p class="project-stack">PWA · PostgreSQL · RLS · Edge Functions</p>
+          <a class="project-link" href="https://github.com/vinnitog/RDP-Pro" target="_blank" rel="noreferrer" aria-label="Examinar repositório do RDP Pro" data-i18n-aria-label="projects.rdpRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-row" role="listitem">
+          <h3>Togs Heads Up</h3>
+          <p data-i18n="projects.headsUpBody">Dashboard PWA que reúne clima, alertas regionais, notícias de Marília-SP e registros de bolas de fogo da NASA/JPL, com falhas isoladas por fonte.</p>
+          <p class="project-stack" data-i18n="projects.headsUpStack">React · Vite · Recharts · APIs públicas</p>
+          <a class="project-link" href="https://github.com/vinnitog/togs-heads-up" target="_blank" rel="noreferrer" aria-label="Examinar repositório do Togs Heads Up" data-i18n-aria-label="projects.headsUpRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-row" role="listitem">
+          <h3>Jogos de Hoje</h3>
+          <p data-i18n="projects.gamesBody">PWA mobile-first para agenda, placares, transmissões e fases das principais competições acompanhadas no Brasil, com cache e operação degradada offline.</p>
+          <p class="project-stack">JavaScript · ESPN API · Service Worker · PWA</p>
+          <a class="project-link" href="https://github.com/vinnitog/jogos-de-hoje" target="_blank" rel="noreferrer" aria-label="Examinar repositório do Jogos de Hoje" data-i18n-aria-label="projects.gamesRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-row" role="listitem">
+          <h3>Casa dos Coleus</h3>
+          <p data-i18n="projects.coleusBody">MVP de atendimento por regras com catálogo configurável, painel protegido, integração preparada para WhatsApp Cloud API e cotação de frete Jadlog.</p>
+          <p class="project-stack" data-i18n="projects.coleusStack">Node.js · WhatsApp Cloud API · Jadlog · Segurança</p>
+          <a class="project-link" href="https://github.com/vinnitog/Casa-dos-Coleus" target="_blank" rel="noreferrer" aria-label="Examinar repositório da Casa dos Coleus" data-i18n-aria-label="projects.coleusRepository"><span data-i18n="projects.repository">Examinar repositório</span> <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contato" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="contact.title">Vamos construir entregas que resistem ao caminho inteiro.</h2>
+      <p data-i18n="contact.summary">Veja o código, acompanhe meu trabalho ou inicie uma conversa pelos perfis onde você já me encontrou.</p>
+      <div class="contact-links">
+        <a class="button button--primary" href="https://www.linkedin.com/in/vin%C3%ADcius-tognoli-8b028765/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="button button--secondary" href="https://github.com/vinnitog" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button button--secondary" href="mailto:vinnitog@gmail.com" target="_blank" rel="noreferrer">vinnitog@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Vinícius Tognoli · QA Engineer</p>
+    <p data-i18n="footer.built">Projetado e desenvolvido com qualidade end-to-end.</p>
+    <a href="#inicio" data-back-to-top><span data-i18n="footer.back">Voltar ao início</span> <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>

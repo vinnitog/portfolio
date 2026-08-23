@@ -1,0 +1,1 @@
+Exportação determinística maskable 512x512 de assets/icon.svg, monograma autorado para este portfólio com safe zone ampliada.

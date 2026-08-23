@@ -1,0 +1,1 @@
+Generated with OpenAI ImageGen on 2026-08-23 from assets/scroll-runner.png as an alternate run-cycle pose. Background was converted to transparency and the frame normalized to 288x192 for the header scroll animation.

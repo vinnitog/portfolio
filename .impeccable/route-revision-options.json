@@ -1,0 +1,21 @@
+{
+  "title": "Rota de Evidências — hierarquia revisada",
+  "question": "Esta versão reduz suficientemente o destaque da foto e do nome, mantendo a rota como protagonista?",
+  "followup": true,
+  "options": [
+    {
+      "id": "mix-rota-evidencias-revisada",
+      "label": "Aprovar Rota revisada",
+      "kicker": "REVISÃO SOLICITADA",
+      "thesis": "A identidade pessoal vira assinatura discreta; qualidade end-to-end, camadas técnicas e projetos assumem o protagonismo.",
+      "palette": ["#FBFAF6", "#18232D", "#35695E", "#B86B4B", "#E7B55D"],
+      "materials": ["papel editorial", "rota contínua", "evidência contextual"],
+      "viewport": "Headline e trilha dominam a abertura; nome compacto no cabeçalho e avatar mínimo ao lado do contato.",
+      "risk": "No mobile, a rota precisa virar uma sequência vertical sem perder a sensação de continuidade.",
+      "comp": ".impeccable/mocks/mix-rota-evidencias-revisada.png"
+    }
+  ],
+  "buildPath": {"value": "comp", "toggle": false},
+  "steer": true,
+  "canon": false
+}

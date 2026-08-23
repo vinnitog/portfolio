@@ -1,0 +1,1 @@
+Derivado determinístico 128x128 de assets/avatar-vinicius.jpg, criado apenas para o chip de identidade do runtime. Crop preservado e sem reenquadramento. Fonte original fornecida e aprovada pelo usuário.

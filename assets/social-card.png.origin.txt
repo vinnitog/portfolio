@@ -1,0 +1,1 @@
+Exportação determinística 1200x630 do sistema visual final Rota de Evidências, produzida por tools/build-assets.py com conteúdo factual do portfólio e sem uso do comp como imagem de fundo.

@@ -1,0 +1,43 @@
+{
+  "title": "Mistura aprovada — escolha a composição",
+  "question": "Os três conceitos já fazem parte da mesma identidade. Qual proporção deve orientar a implementação?",
+  "followup": true,
+  "options": [
+    {
+      "id": "mix-dossie-conectado",
+      "label": "Dossiê Conectado",
+      "kicker": "EQUILÍBRIO EDITORIAL",
+      "thesis": "O dossiê lidera; o mapa organiza a leitura vertical e o console aparece em estados discretos.",
+      "palette": ["#FBFAF6", "#18232D", "#35695E", "#B86B4B", "#E7B55D"],
+      "materials": ["papel editorial", "linha de rastreabilidade", "estados semânticos"],
+      "viewport": "Nome e retrato dominam a abertura; um índice vertical conecta as quatro camadas e se ramifica nos projetos.",
+      "risk": "Os rótulos de estado do comp são demonstrativos e não serão tratados como resultados reais na implementação.",
+      "comp": ".impeccable/mocks/mix-dossie-conectado.png"
+    },
+    {
+      "id": "mix-rota-evidencias",
+      "label": "Rota de Evidências",
+      "kicker": "MAPA PROTAGONISTA",
+      "thesis": "A trilha end-to-end vira a interação memorável; o dossiê fornece acabamento e o console vive dentro dos nós.",
+      "palette": ["#FBFAF6", "#18232D", "#35695E", "#B86B4B", "#E7B55D"],
+      "materials": ["papel editorial", "rota contínua", "painéis de evidência"],
+      "viewport": "A headline abre a narrativa; o retrato é a estação inicial e a rota atravessa Database, Backend, APIs e Frontend até os cases.",
+      "risk": "A rota precisa colapsar com inteligência no mobile para não virar um infográfico apertado.",
+      "comp": ".impeccable/mocks/mix-rota-evidencias.png"
+    },
+    {
+      "id": "mix-central-validacao",
+      "label": "Central de Validação",
+      "kicker": "CONSOLE PROTAGONISTA",
+      "thesis": "O dossiê enquadra um único instrumento vivo; a trilha cruza a fronteira entre pessoa, processo e projetos.",
+      "palette": ["#FBFAF6", "#18232D", "#0F1B22", "#4BC29A", "#E7B55D"],
+      "materials": ["papel editorial", "painel técnico fosco", "linha end-to-end"],
+      "viewport": "Retrato e posicionamento ficam em uma capa clara; um grande painel escuro mostra a validação atravessando as quatro camadas.",
+      "risk": "O painel escuro precisa continuar sendo uma evidência editorial, não se transformar em dashboard.",
+      "comp": ".impeccable/mocks/mix-central-validacao.png"
+    }
+  ],
+  "buildPath": {"value": "comp", "toggle": false},
+  "steer": true,
+  "canon": false
+}

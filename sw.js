@@ -1,0 +1,45 @@
+const CACHE_PREFIX = "portfolio-v";
+const CACHE_NAME = "portfolio-v22";
+const APP_SHELL = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./script.js",
+  "./manifest.webmanifest",
+  "./assets/icon.svg",
+  "./assets/icon-192.png",
+  "./assets/icon-512.png",
+  "./assets/icon-maskable-512.png",
+  "./assets/avatar-vinicius-128.jpg",
+  "./assets/scroll-runner.png",
+  "./assets/scroll-runner-frame-2.png",
+  "./assets/scroll-runner-frame-3.png",
+  "./assets/fonts/archivo-latin.woff2",
+  "./assets/fonts/manrope-latin.woff2"
+];
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(APP_SHELL))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(
+        keys
+          .filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME)
+          .map((key) => caches.delete(key))
+      ))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "GET") return;
+
+  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
+});

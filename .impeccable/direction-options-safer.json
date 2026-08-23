@@ -1,0 +1,56 @@
+{
+  "title": "Uma mão mais segura — sem ficar genérica",
+  "question": "Estas direções preservam clareza profissional e reduzem o risco conceitual. Qual delas deve orientar o portfólio?",
+  "options": [
+    {
+      "id": "safer-trace-map",
+      "label": "Mapa de Rastreabilidade",
+      "kicker": "SAFER HAND",
+      "lineage": "mapas de metrô, diagramas de arquitetura e pipelines de entrega",
+      "thesis": "Uma única linha percorre experiência, automação e projetos, provando que qualidade conecta todas as etapas.",
+      "palette": ["#F7F8F5", "#17212B", "#2F6B5F", "#E76F51", "#D8E3DC"],
+      "materials": ["mapa técnico", "nós de conexão", "legendas editoriais"],
+      "viewport": "Headline e avatar formam a estação inicial; uma linha end-to-end desce por banco, backend, APIs e frontend até chegar aos dois cases.",
+      "risk": "O mapa precisa permanecer simples para não transformar leitura em decodificação.",
+      "comp": ".impeccable/mocks/decision/safer-trace-map.png"
+    },
+    {
+      "id": "safer-test-notebook",
+      "label": "Caderno de Testes",
+      "kicker": "SAFER HAND",
+      "lineage": "cadernos de laboratório, folhas de inspeção e documentação técnica",
+      "thesis": "A experiência é apresentada como um registro de decisões, riscos investigados e produtos validados.",
+      "palette": ["#FCFBF7", "#202A35", "#276B5C", "#D39A3A", "#C9D7D1"],
+      "materials": ["papel pautado", "carimbos de validação", "anotações precisas"],
+      "viewport": "Uma folha editorial limpa apresenta avatar, posicionamento e um índice curto; carimbos discretos abrem experiência, competências e cases.",
+      "risk": "Se as anotações virarem decoração, a direção perde a objetividade profissional.",
+      "comp": ".impeccable/mocks/decision/safer-test-notebook.png"
+    },
+    {
+      "id": "safer-flight-recorder",
+      "label": "Flight Recorder",
+      "kicker": "SAFER HAND",
+      "lineage": "gravadores de voo, timelines de release e logs de execução",
+      "thesis": "A trajetória profissional é uma sequência legível de sinais: observar, investigar, automatizar e validar.",
+      "palette": ["#F2F4F1", "#13202B", "#315E52", "#F28C28", "#A8BCB4"],
+      "materials": ["faixas de tempo", "marcadores de evento", "painel fosco"],
+      "viewport": "Avatar e headline ocupam o topo; abaixo, uma timeline horizontal compacta conecta Ricochet360, automação, IA e projetos sem parecer dashboard.",
+      "risk": "A referência instrumental pode parecer fria se a presença humana perder escala.",
+      "comp": ".impeccable/mocks/decision/safer-flight-recorder.png"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "label": "Clássico premium",
+    "thesis": "A clareza narrativa de Brittany Chiang encontra o refinamento pessoal de Lee Robinson e a microinteração com propósito de Josh W. Comeau.",
+    "palette": ["#FAFAF8", "#14202B", "#2D6A5B", "#8FB9AD"],
+    "materials": ["grid editorial", "fotografia oficial", "microinterações discretas"],
+    "viewport": "Navegação mínima, headline direta e avatar grande no hero; experiência e projetos aparecem logo abaixo em uma sequência convencional impecável.",
+    "risk": "É a opção de menor risco, mas depende do conteúdo e do acabamento para não se misturar a outros portfólios de tecnologia.",
+    "comp": ".impeccable/mocks/decision/safer-canon.png",
+    "hero": "https://brittanychiang.com/"
+  },
+  "steer": true
+}

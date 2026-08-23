@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Monograma VT</title>
+  <rect width="512" height="512" rx="104" fill="#f9f6f5"/>
+  <path d="M76 150h88l92 224 92-224h88L293 438h-74L76 150Z" fill="#05543d"/>
+  <path d="M134 74h244v64h-86v236h-72V138h-86V74Z" fill="#07111e"/>
+</svg>
