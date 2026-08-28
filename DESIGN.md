@@ -262,7 +262,7 @@ Compactos e informativos, nunca decorativos.
 
 ### Project Feature + Ledger
 
-A seção Projetos evita repetir seis cards grandes. VerbaJus ocupa um destaque editorial único, dividido entre narrativa e metadados, com regras superior e inferior e sem fundo de card. Os outros cinco projetos formam uma lista linear separada por regras finas: nome, resumo verificável, stack e ação externa. Em até 1050px cada linha usa duas colunas; em até 760px vira uma coluna, preservando a ordem semântica. O ledger expõe semântica de lista, e cada ação possui nome acessível específico do projeto, além de `target="_blank"` e `noreferrer`.
+A seção Projetos evita repetir seis cards grandes. VerbaJus ocupa um destaque editorial único, dividido entre narrativa e metadados, com regras superior e inferior e sem fundo de card. Os outros cinco projetos formam uma lista linear separada por regras finas: nome, resumo verificável, stack e ação externa. Projetos públicos apontam diretamente para o repositório; VerbaJus e Casa dos Coleus são identificados como privados e oferecem contato, sem links anônimos quebrados. Em até 1050px cada linha usa duas colunas; em até 760px vira uma coluna, preservando a ordem semântica. O ledger expõe semântica de lista, e cada ação possui nome acessível específico do projeto, além de `target="_blank"` e `noreferrer`.
 
 ### Cards / Containers
 
@@ -308,7 +308,7 @@ O runner é um personagem pixel art decorativo composto por três PNGs de 288 ×
 - **Direction & Progress:** a posição horizontal acompanha `scrollY / scrollRange` dentro da largura real do header; deltas maiores que 1 invertem direção, trail e sprite.
 - **Scheduling:** scroll passivo e resize compartilham um único `requestAnimationFrame`; o estado `is-running` termina 160ms após o último render.
 - **Reduced Motion:** quando `prefers-reduced-motion: reduce` está ativo, o setup não registra listeners e o CSS remove o runner por completo.
-- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v22`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
+- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v23`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
 
 ## Do's and Don'ts
 

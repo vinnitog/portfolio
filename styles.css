@@ -969,6 +969,22 @@ html[data-theme="dark"] .theme-icon--moon {
   color: var(--ink);
 }
 
+.project-access {
+  display: grid;
+  width: fit-content;
+  gap: 0.15rem;
+  justify-items: start;
+}
+
+.project-private-label {
+  color: var(--amber);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .project-ledger {
   border-bottom: 1px solid var(--ink);
 }
@@ -1174,7 +1190,8 @@ html[data-theme="dark"] .theme-icon--moon {
   }
 
   .project-row .project-stack,
-  .project-row .project-link {
+  .project-row > .project-link,
+  .project-row .project-access {
     grid-column: 2;
   }
 
@@ -1321,7 +1338,8 @@ html[data-theme="dark"] .theme-icon--moon {
   }
 
   .project-row .project-stack,
-  .project-row .project-link {
+  .project-row > .project-link,
+  .project-row .project-access {
     grid-column: auto;
   }
 

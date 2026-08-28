@@ -429,9 +429,9 @@ test("UX9-MOBILE-01/02 P0/P1: preference controls stay in the responsive navigat
   assert.match(css, /\.header-controls\s*\{[\s\S]*?display:\s*flex/s);
 });
 
-test("SW22-01 P0: v22 precaches the atomic localized/themed app shell", () => {
+test("SW23-01 P0: v23 precaches the atomic localized/themed app shell", () => {
   assert.match(swSource, /const CACHE_PREFIX = "portfolio-v"/);
-  assert.match(swSource, /const CACHE_NAME = "portfolio-v22"/);
+  assert.match(swSource, /const CACHE_NAME = "portfolio-v23"/);
   const shell = swSource.match(/const APP_SHELL = \[([\s\S]*?)\];/)?.[1] || "";
   for (const entry of [
     "./index.html", "./styles.css", "./script.js", "./manifest.webmanifest",
