@@ -105,12 +105,10 @@ test("CT-03 P0: external destinations are exact and new tabs are safe", () => {
   const expected = [
     "https://www.linkedin.com/in/vin%C3%ADcius-tognoli-8b028765/",
     "https://github.com/vinnitog",
-    "https://github.com/vinnitog/VerbaJus",
     "https://github.com/vinnitog/TX-Raio-X",
     "https://github.com/vinnitog/RDP-Pro",
     "https://github.com/vinnitog/togs-heads-up",
-    "https://github.com/vinnitog/jogos-de-hoje",
-    "https://github.com/vinnitog/Casa-dos-Coleus"
+    "https://github.com/vinnitog/jogos-de-hoje"
   ];
   for (const href of expected) assert.ok(links.some((link) => link.href === href), `missing ${href}`);
   for (const link of links) {
@@ -183,16 +181,15 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
   const script = read("script.js");
   const section = html.match(/<section class="section section--projects"[\s\S]*?<\/section>/)?.[0] || "";
   const projectLinks = [...section.matchAll(/<a\b[^>]*class="project-link"[^>]*>/g)]
-    .map((match) => attributes(match[0]));
+    .map((match) => attributes(match[0]))
+    .filter((link) => link.href?.startsWith("https://"));
   const rows = [...section.matchAll(/<article class="project-row"[^>]*>([\s\S]*?)<\/article>/g)]
     .map((match) => match[1]);
   const expectedLinks = [
-    ["https://github.com/vinnitog/VerbaJus", "projects.verbaRepository"],
     ["https://github.com/vinnitog/TX-Raio-X", "projects.txRepository"],
     ["https://github.com/vinnitog/RDP-Pro", "projects.rdpRepository"],
     ["https://github.com/vinnitog/togs-heads-up", "projects.headsUpRepository"],
-    ["https://github.com/vinnitog/jogos-de-hoje", "projects.gamesRepository"],
-    ["https://github.com/vinnitog/Casa-dos-Coleus", "projects.coleusRepository"]
+    ["https://github.com/vinnitog/jogos-de-hoje", "projects.gamesRepository"]
   ];
 
   assert.equal((section.match(/class="project-feature"/g) || []).length, 1);
@@ -204,13 +201,13 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
   ], "the compact ledger must keep the approved five-project order");
   assert.match(section, /class="project-ledger" role="list"/);
   assert.equal((section.match(/role="listitem"/g) || []).length, 5);
-  assert.equal((section.match(/data-i18n-aria-label="projects\.[A-Za-z]+Repository"/g) || []).length, 6);
+  assert.equal((section.match(/data-i18n-aria-label="projects\.[A-Za-z]+Repository"/g) || []).length, 4);
   assert.match(section, /class="project-feature"[\s\S]*?VerbaJus[\s\S]*?projects\.ready/);
   assert.match(section, /data-i18n="projects\.summary">Um case principal e um índice direto/,
     "the no-JS fallback must match the current Portuguese project summary");
   assert.doesNotMatch(section, /case-study|case-diagram/);
 
-  for (const key of ["verbaTitle", "verbaBody", "featureLabel", "ready", "ledgerLabel", "headsUpBody", "headsUpStack", "gamesBody", "coleusBody", "coleusStack"]) {
+  for (const key of ["verbaTitle", "verbaBody", "featureLabel", "ready", "ledgerLabel", "headsUpBody", "headsUpStack", "gamesBody", "coleusBody", "coleusStack", "private", "contactProject", "verbaContact", "coleusContact"]) {
     assert.match(script, new RegExp(`"projects\\.${key}"\\s*:`), `missing project translation: ${key}`);
   }
   assert.match(css, /\.section--projects\s*\{[\s\S]*?padding-top:\s*clamp\(5rem, 8vw, 7rem\)/s);
@@ -220,6 +217,25 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
     "repository actions must keep a 48px touch target");
   assert.match(css, /@media \(max-width: 1050px\)[\s\S]*?\.project-feature\s*\{[\s\S]*?grid-template-columns:\s*1fr/s);
   assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.project-row\s*\{[\s\S]*?grid-template-columns:\s*1fr/s);
+});
+
+test("PRJ-02 P0: private projects expose honest status and contact instead of broken repository links", () => {
+  const html = read("index.html");
+  const section = html.match(/<section class="section section--projects"[\s\S]*?<\/section>/)?.[0] || "";
+  const privateActions = [...section.matchAll(/<div class="project-access project-access--private">([\s\S]*?)<\/div>/g)]
+    .map((match) => match[1]);
+
+  assert.equal(privateActions.length, 2, "VerbaJus and Casa dos Coleus must be identified as private");
+  assert.doesNotMatch(section, /github\.com\/vinnitog\/(?:VerbaJus|Casa-dos-Coleus)/,
+    "anonymous visitors must not be sent to private repository 404 pages");
+  assert.equal((section.match(/data-i18n="projects\.private"/g) || []).length, 2);
+  assert.equal((section.match(/href="mailto:vinnitog@gmail\.com"/g) || []).length, 2);
+  assert.match(privateActions[0], /data-i18n-aria-label="projects\.verbaContact"/);
+  assert.match(privateActions[1], /data-i18n-aria-label="projects\.coleusContact"/);
+  for (const action of privateActions) {
+    assert.match(action, /target="_blank"/);
+    assert.match(action, /rel="noreferrer"/);
+  }
 });
 
 test("RT-03 P0: route controls keep keyboard-native order and visible focus", () => {

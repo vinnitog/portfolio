@@ -1,6 +1,6 @@
 # Estratégia de Qualidade — Portfolio
 
-Atualizado em 2026-08-23 para navegação interna do menu e rodapé, pipeline de oito etapas, runner em faixa própria, seção compacta de seis projetos, GitHub Pages e app shell `portfolio-v22`.
+Atualizado em 2026-08-28 para navegação interna do menu e rodapé, pipeline de oito etapas, runner em faixa própria, seção compacta de seis projetos, CI, GitHub Pages e app shell `portfolio-v23`.
 
 ## Escopo e riscos
 
@@ -24,7 +24,7 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 | PIPE-02 ★ | P0 | Unit | Ativar cada etapa por clique, foco e `pointerenter`; alternar idioma. | Exatamente um `aria-pressed=true`; painel único acompanha a etapa e preserva estado no idioma novo. |
 | CARD-01 | P0 | Manual/E2E geométrico | Medir rótulo, conector e painel em 390, 768, 1050/1051 e 1440 px, PT/EN e zoom 200%. | Card fica abaixo do rótulo correspondente, sem cobrir texto, cortar conteúdo ou gerar overflow. |
 | PIPE-03 ★ | P0 | Node | Procurar endpoints/CTAs antigos e chaves órfãs. | Ausência de `project-destination`, `route-actions`, `route.explore` e `experience.period`; projetos continuam na seção própria. |
-| PRJ-01 ★ | P0/P1 | Node + manual | Validar a seção Projetos em PT/EN e 390/1050/1440px. | Um VerbaJus em destaque, cinco linhas editoriais, seis links seguros, sem cards gigantes repetidos ou overflow. |
+| PRJ-01 ★ | P0/P1 | Node + manual | Validar a seção Projetos em PT/EN e 390/1050/1440px. | Um VerbaJus em destaque, cinco linhas editoriais, quatro links públicos seguros e dois projetos privados com contato, sem cards gigantes repetidos ou overflow. |
 | PULSE-01 ★ | P1 | Node + manual | Conferir markup, motion gate e percurso horizontal/vertical. | Um único pulso percorre a trilha sem encobrir ícones/rótulos e deixa de animar em reduced motion. |
 | ICON-01 | P1 | Manual | Inspecionar os oito nós em dark/light. | Somente SVGs ficam visíveis; não há círculos, pseudo-dots ou halos atrás dos ícones. |
 | LINK-01 ★ | P0 | Node | Inspecionar todos os anchors. | Wordmark, links internos do menu e “Voltar ao início” não usam `_blank`/`noreferrer` e levam às seções corretas; links externos preservam nova aba segura. |
@@ -42,8 +42,9 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 | BACK-01 ★ | P1 | Unit + teclado | Ativar “Voltar ao início” após Contato estar atual. | Navega para `#inicio`, limpa `aria-current` obsoleto e restaura foco no wordmark visível sem novo scroll. |
 | AX-01 ★ | P0 | Node | Validar landmarks, IDs, headings, ARIA e elementos decorativos. | Um `h1.sr-only`; referências resolvidas; SVGs/runner não duplicam conteúdo assistivo. |
 | CT-01 ★ | P0 | Node | Conferir fatos, links, email e ausência de claims inventados. | Conteúdo aprovado permanece; não entram métricas, prêmios ou resultados sem fonte. |
-| SW22-01 ★ | P0 | Unit SW | Instalar `portfolio-v22` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
-| SW22-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
+| CI-01 ★ | P0 | Node | Inspecionar gatilhos e permissões do workflow de validação. | Push em `develop` e PR para `main` executam a suíte com acesso somente de leitura e sem permissão de deploy. |
+| SW23-01 ★ | P0 | Unit SW | Instalar `portfolio-v23` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
+| SW23-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
 | VP-390 | P0 | Manual visual | Percorrer a página e operar menu, pipeline, preferências, projetos e contato. | Sem corte, sobreposição impeditiva ou scroll horizontal; alvos e foco continuam alcançáveis. |
 | VP-1440 | P0 | Manual visual | Operar oito etapas e scroll no primeiro viewport. | Pipeline horizontal, card e runner permanecem alinhados e não competem com o conteúdo/menu. |
 
@@ -52,19 +53,19 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 ## Estado automatizado
 
 - Comando preferencial no Windows: `.\test.cmd`.
-- Resultado final desta mudança: **73/73 testes passando**.
+- Resultado final desta mudança: **77/77 testes passando**.
 - `node --check script.js` e `node --check tools\visual-check.mjs` passam.
-- A suíte cobre pipeline, i18n, temas, seção compacta de seis projetos, workflow GitHub Pages, navegação interna do menu/rodapé, links externos/email, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v22`.
+- A suíte cobre pipeline, i18n, temas, seção compacta de seis projetos, workflows de CI e GitHub Pages, navegação interna do menu/rodapé, links externos/email, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v23`.
 
 ## Validação manual pendente
 
-Conforme `AGENTS.md`, o Browser local não foi acionado sem solicitação explícita. Permanecem como inspeção manual: geometria renderizada do conector/card em todos os nós, cadência visual dos três frames, pulso e X em ambos os temas, expansão PT/EN, abertura real das novas abas e do cliente de email.
+A inspeção visual automatizada local não foi concluída porque o servidor não estava ativo (`ERR_CONNECTION_REFUSED`); conforme `AGENTS.md`, a tentativa não foi repetida. Permanecem como inspeção manual: geometria renderizada do conector/card em todos os nós, cadência visual dos três frames, pulso e X em ambos os temas, expansão PT/EN, abertura real das novas abas e do cliente de email.
 
-Antes da publicação, confirmar acesso anônimo aos repositórios VerbaJus e Casa dos Coleus. Eles estavam privados na verificação de 2026-08-23; os URLs pedidos foram preservados, mas visitantes sem permissão não verão o conteúdo enquanto permanecerem privados.
+VerbaJus e Casa dos Coleus estavam privados na verificação de 2026-08-28. Enquanto permanecerem assim, o portfólio deve apresentar o status privado e uma ação de contato, nunca um link anônimo para o repositório.
 
 ## Critérios de saída
 
 - Todos os P0 automatizados passam e não há regressão P1 conhecida.
 - Nenhum artefato vigente menciona pipeline de quatro nós, endpoints antigos, runner fixo, idle de 140 ms ou cache anterior como vigente.
-- App shell v22 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
+- App shell v23 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
 - Mudanças permanecem limitadas ao pedido e a documentação acompanha o comportamento entregue.

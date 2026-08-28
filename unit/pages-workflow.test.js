@@ -24,9 +24,9 @@ test("PAGES-01 P0: deployment is limited to main with the required Pages permiss
     "manual dispatches from non-main refs must not publish");
 
   for (const action of [
-    "actions/checkout@v4",
+    "actions/checkout@v6",
     "actions/configure-pages@v5",
-    "actions/upload-pages-artifact@v3",
+    "actions/upload-pages-artifact@v4",
     "actions/deploy-pages@v4"
   ]) {
     assert.match(workflow, new RegExp(`uses: ${action.replace("/", "\\/")}`), `missing pinned action: ${action}`);
@@ -61,7 +61,7 @@ test("PAGES-02 P0: the uploaded _site artifact contains the complete app shell a
   assert.match(prepare, /test "\$\(find _site -type f \| wc -l\)" -eq 17/,
     "the workflow should reject an unexpected artifact inventory");
   assert.match(workflow,
-    /uses: actions\/upload-pages-artifact@v3\r?\n\s+with:\r?\n\s+path: _site\s*$/m,
+    /uses: actions\/upload-pages-artifact@v4\r?\n\s+with:\r?\n\s+path: _site\s*$/m,
     "GitHub Pages must receive the prepared directory, not the repository root");
 
   const appShellBody = serviceWorker.match(/const APP_SHELL = \[([\s\S]*?)\];/)?.[1] || "";
@@ -88,4 +88,18 @@ test("PAGES-02 P0: the uploaded _site artifact contains the complete app shell a
     assert.equal(prepare.includes(sourceOnlyPattern), false,
       `source-only asset should not enter the Pages recipe: ${sourceOnlyPattern}`);
   }
+});
+
+test("CI-01 P0: develop pushes and pull requests to main run the test suite without deploy permissions", () => {
+  const workflow = read(".github/workflows/ci.yml");
+
+  assert.match(workflow,
+    /^on:\r?\n  push:\r?\n    branches: \[develop\]\r?\n  pull_request:\r?\n    branches: \[main\]\r?\n  workflow_dispatch:\s*$/m,
+    "CI should cover develop, PRs targeting main, and manual diagnostics");
+  assert.match(workflow, /^permissions:\r?\n  contents: read\s*$/m,
+    "validation should keep read-only repository permissions");
+  assert.match(workflow, /uses: actions\/checkout@v6/);
+  assert.match(workflow, /- name: Test\r?\n\s+run: npm test/);
+  assert.doesNotMatch(workflow, /pages:\s*write|id-token:\s*write|deploy-pages/,
+    "validation must not gain deployment privileges");
 });
