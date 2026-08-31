@@ -373,8 +373,8 @@ test("RUN-10 P2: runner gets a dedicated header lane, stays noninteractive, pixe
   assert.match(css, /@media \(max-width:\s*760px\)[\s\S]*?\.scroll-runner\s*\{[\s\S]*?bottom:\s*-0\.15rem;[\s\S]*?width:\s*3\.1rem;/s);
 });
 
-test("SW23-01/02 P0: all runner frames are in the exact v23 atomic app shell", () => {
-  assert.match(sw, /const CACHE_NAME = "portfolio-v23"/);
+test("SW24-01/02 P0: all runner frames are in the exact v24 atomic app shell", () => {
+  assert.match(sw, /const CACHE_NAME = "portfolio-v24"/);
   const shell = sw.match(/const APP_SHELL = \[([\s\S]*?)\];/)?.[1] || "";
   for (const file of ["scroll-runner.png", "scroll-runner-frame-2.png", "scroll-runner-frame-3.png"]) {
     assert.match(shell, new RegExp(`"\\.\\/assets\\/${file.replaceAll(".", "\\.")}"`));

@@ -1,6 +1,6 @@
 # Estratégia de Qualidade — Portfolio
 
-Atualizado em 2026-08-28 para navegação interna do menu e rodapé, pipeline de oito etapas, runner em faixa própria, seção compacta de seis projetos, CI, GitHub Pages e app shell `portfolio-v23`.
+Atualizado em 2026-08-30 para navegação interna do menu e rodapé, pipeline de oito etapas, runner em faixa própria, contatos via Gmail, seção compacta de seis projetos, CI, GitHub Pages e app shell `portfolio-v24`.
 
 ## Escopo e riscos
 
@@ -28,7 +28,7 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 | PULSE-01 ★ | P1 | Node + manual | Conferir markup, motion gate e percurso horizontal/vertical. | Um único pulso percorre a trilha sem encobrir ícones/rótulos e deixa de animar em reduced motion. |
 | ICON-01 | P1 | Manual | Inspecionar os oito nós em dark/light. | Somente SVGs ficam visíveis; não há círculos, pseudo-dots ou halos atrás dos ícones. |
 | LINK-01 ★ | P0 | Node | Inspecionar todos os anchors. | Wordmark, links internos do menu e “Voltar ao início” não usam `_blank`/`noreferrer` e levam às seções corretas; links externos preservam nova aba segura. |
-| MAIL-01 ★ | P0 | Node + manual | Validar `mailto:vinnitog@gmail.com`. | Email é visível, acessível e abre o compositor sem substituir a aba do portfólio. |
+| MAIL-01 ★ | P0 | Node + manual | Validar os três links de contato do Gmail. | Gmail abre em nova aba no modo de composição, endereçado a `vinnitog@gmail.com`, com assunto específico para cada projeto e para o contato geral. |
 | DIV-01 ★ | P1 | Node + manual | Inspecionar `.section::before/::after` em dark/light e mobile. | Caminho SVG mascarado é curvo, tracejado, mede 100vw, não cria scroll horizontal e termina em X com contraste suficiente. |
 | HERO-ALIGN-01 ★ | P1 | Node + manual | Comparar resumo, título e introdução da pipeline em desktop e layout compacto. | Os três blocos compartilham o mesmo gutter; abaixo de 1050px o recuo zera em conjunto. |
 | RUN-01 ★ | P0 | Node | Validar markup, dimensões, alpha e proveniência dos frames. | Um runner `aria-hidden`; três PNGs 288 × 192, não vazios, com `.origin.txt`. |
@@ -43,8 +43,8 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 | AX-01 ★ | P0 | Node | Validar landmarks, IDs, headings, ARIA e elementos decorativos. | Um `h1.sr-only`; referências resolvidas; SVGs/runner não duplicam conteúdo assistivo. |
 | CT-01 ★ | P0 | Node | Conferir fatos, links, email e ausência de claims inventados. | Conteúdo aprovado permanece; não entram métricas, prêmios ou resultados sem fonte. |
 | CI-01 ★ | P0 | Node | Inspecionar gatilhos e permissões do workflow de validação. | Push em `develop` e PR para `main` executam a suíte com acesso somente de leitura e sem permissão de deploy. |
-| SW23-01 ★ | P0 | Unit SW | Instalar `portfolio-v23` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
-| SW23-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
+| SW24-01 ★ | P0 | Unit SW | Instalar `portfolio-v24` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
+| SW24-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
 | VP-390 | P0 | Manual visual | Percorrer a página e operar menu, pipeline, preferências, projetos e contato. | Sem corte, sobreposição impeditiva ou scroll horizontal; alvos e foco continuam alcançáveis. |
 | VP-1440 | P0 | Manual visual | Operar oito etapas e scroll no primeiro viewport. | Pipeline horizontal, card e runner permanecem alinhados e não competem com o conteúdo/menu. |
 
@@ -53,13 +53,13 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 ## Estado automatizado
 
 - Comando preferencial no Windows: `.\test.cmd`.
-- Resultado final desta mudança: **77/77 testes passando**.
+- Resultado final desta mudança: **78/78 testes passando**.
 - `node --check script.js` e `node --check tools\visual-check.mjs` passam.
-- A suíte cobre pipeline, i18n, temas, seção compacta de seis projetos, workflows de CI e GitHub Pages, navegação interna do menu/rodapé, links externos/email, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v23`.
+- A suíte cobre pipeline, i18n, temas, seção compacta de seis projetos, workflows de CI e GitHub Pages, navegação interna do menu/rodapé, contatos pelo Gmail, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v24`.
 
 ## Validação manual pendente
 
-A inspeção visual automatizada local não foi concluída porque o servidor não estava ativo (`ERR_CONNECTION_REFUSED`); conforme `AGENTS.md`, a tentativa não foi repetida. Permanecem como inspeção manual: geometria renderizada do conector/card em todos os nós, cadência visual dos três frames, pulso e X em ambos os temas, expansão PT/EN, abertura real das novas abas e do cliente de email.
+A inspeção visual automatizada local não foi concluída porque o servidor não estava ativo (`ERR_CONNECTION_REFUSED`); conforme `AGENTS.md`, a tentativa não foi repetida. Permanecem como inspeção manual: geometria renderizada do conector/card em todos os nós, cadência visual dos três frames, pulso e X em ambos os temas, expansão PT/EN e abertura real das novas abas do Gmail.
 
 VerbaJus e Casa dos Coleus estavam privados na verificação de 2026-08-28. Enquanto permanecerem assim, o portfólio deve apresentar o status privado e uma ação de contato, nunca um link anônimo para o repositório.
 
@@ -67,5 +67,5 @@ VerbaJus e Casa dos Coleus estavam privados na verificação de 2026-08-28. Enqu
 
 - Todos os P0 automatizados passam e não há regressão P1 conhecida.
 - Nenhum artefato vigente menciona pipeline de quatro nós, endpoints antigos, runner fixo, idle de 140 ms ou cache anterior como vigente.
-- App shell v23 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
+- App shell v24 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
 - Mudanças permanecem limitadas ao pedido e a documentação acompanha o comportamento entregue.
