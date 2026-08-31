@@ -276,7 +276,7 @@ Contêineres existem para evidência, não como unidade padrão de toda seção.
 
 ### Navigation
 
-O cabeçalho é uma regra editorial sticky com nome compacto, links espaçados, avatar circular de 2.8rem e controles de preferência agrupados. Links usam peso 650 e revelam uma linha Verde de Rota de 2px no hover ou estado atual; o wordmark e as âncoras internas do menu navegam no documento atual e preservam o scroll suave, enquanto perfis e demais destinos externos abrem em nova aba com `noreferrer`. Em mobile, o menu se torna uma lista de largura integral sob o cabeçalho, acionada por um botão circular de 3rem, e os controles permanecem alcançáveis dentro do menu. O contato direto usa `mailto:vinnitog@gmail.com` com o contrato de nova aba. No rodapé, “Voltar ao início” reutiliza `#inicio`, limpa o `aria-current` da seção anterior e devolve o foco ao wordmark visível sem provocar um segundo scroll.
+O cabeçalho é uma regra editorial sticky com nome compacto, links espaçados, avatar circular de 2.8rem e controles de preferência agrupados. Links usam peso 650 e revelam uma linha Verde de Rota de 2px no hover ou estado atual; o wordmark e as âncoras internas do menu navegam no documento atual e preservam o scroll suave, enquanto perfis e demais destinos externos abrem em nova aba com `noreferrer`. Em mobile, o menu se torna uma lista de largura integral sob o cabeçalho, acionada por um botão circular de 3rem, e os controles permanecem alcançáveis dentro do menu. O contato direto abre o compositor web do Gmail em nova aba, já endereçado a `vinnitog@gmail.com`; os projetos privados incluem assunto específico e o contato geral identifica o portfólio. No rodapé, “Voltar ao início” reutiliza `#inicio`, limpa o `aria-current` da seção anterior e devolve o foco ao wordmark visível sem provocar um segundo scroll.
 
 ### Preference Controls
 
@@ -308,7 +308,7 @@ O runner é um personagem pixel art decorativo composto por três PNGs de 288 ×
 - **Direction & Progress:** a posição horizontal acompanha `scrollY / scrollRange` dentro da largura real do header; deltas maiores que 1 invertem direção, trail e sprite.
 - **Scheduling:** scroll passivo e resize compartilham um único `requestAnimationFrame`; o estado `is-running` termina 160ms após o último render.
 - **Reduced Motion:** quando `prefers-reduced-motion: reduce` está ativo, o setup não registra listeners e o CSS remove o runner por completo.
-- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v23`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
+- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v24`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
 
 ## Do's and Don'ts
 

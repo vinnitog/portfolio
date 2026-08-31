@@ -45,9 +45,9 @@ O diferencial confirmado é a combinação de Quality Engineering, automação e
 - Cada etapa do pipeline deve abrir um único card de evidências conectado ao rótulo ativo; o card acompanha o nó em desktop e entra imediatamente depois dele no fluxo mobile.
 - Os ícones da rota são os únicos marcadores, sem círculos de contêiner, pseudo-dots ou halo; um pulso percorre a linha quando movimento é permitido.
 - O wordmark, as âncoras internas do menu, o skip link e “Voltar ao início” navegam no documento atual. O retorno pelo rodapé limpa o estado da seção anterior e restaura foco visível no wordmark. Perfis, repositórios, email e demais links externos abrem em nova aba com `noreferrer`.
-- Os links externos devem abrir os perfis e repositórios públicos reais fornecidos pelo usuário. Projetos privados devem ser identificados com clareza e oferecer contato por `mailto:vinnitog@gmail.com`, sem encaminhar visitantes para páginas 404.
+- Os links externos devem abrir os perfis e repositórios públicos reais fornecidos pelo usuário. Projetos privados devem ser identificados com clareza e oferecer contato pelo compositor web do Gmail, já endereçado a `vinnitog@gmail.com`, sem encaminhar visitantes para páginas 404.
 - Divisores editoriais devem atravessar a viewport com traço pontilhado e um X terminal.
-- O app shell `portfolio-v23` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
+- O app shell `portfolio-v24` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
 - Não inventar métricas, clientes, depoimentos ou resultados comerciais.
 - O blog é uma evolução futura e não faz parte desta primeira entrega.
 

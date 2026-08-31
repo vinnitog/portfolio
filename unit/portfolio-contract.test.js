@@ -158,7 +158,43 @@ test("CT-04 P0: internal header/footer anchors stay in-page while external links
     assert.equal(link.target, "_blank", `${link.href} should open in a new tab`);
     assert.match(link.rel || "", /\bnoreferrer\b/, `${link.href} should block window.opener`);
   }
-  assert.ok(links.some((link) => link.href === "mailto:vinnitog@gmail.com"));
+  assert.equal(links.some((link) => link.href?.startsWith("mailto:")), false,
+    "contact actions should open Gmail compose instead of delegating to an unknown local mail client");
+});
+
+test("MAIL-01 P0: project and general contact actions open addressed Gmail drafts", () => {
+  const html = read("index.html");
+  const links = [...html.matchAll(/<a\b[^>]*href="https:\/\/mail\.google\.com\/mail\/\?[^\"]+"[^>]*>/g)]
+    .map((match) => attributes(match[0]));
+  const expectedSubjects = [
+    "Contato sobre o VerbaJus",
+    "Contato sobre a Casa dos Coleus",
+    "Contato pelo portfólio"
+  ];
+
+  assert.equal(links.length, 3, "the two private projects and contact email should open Gmail compose");
+  assert.deepEqual(links.map((link) => {
+    const destination = new URL(link.href.replaceAll("&amp;", "&"));
+    return {
+      origin: destination.origin,
+      path: destination.pathname,
+      view: destination.searchParams.get("view"),
+      fullscreen: destination.searchParams.get("fs"),
+      recipient: destination.searchParams.get("to"),
+      subject: destination.searchParams.get("su"),
+      target: link.target,
+      rel: link.rel
+    };
+  }), expectedSubjects.map((subject) => ({
+    origin: "https://mail.google.com",
+    path: "/mail/",
+    view: "cm",
+    fullscreen: "1",
+    recipient: "vinnitog@gmail.com",
+    subject,
+    target: "_blank",
+    rel: "noreferrer"
+  })));
 });
 
 test("IA-PIPELINE-01 P0: retired route endpoints, CTAs and Ricochet360 period leave no orphan", () => {
@@ -182,7 +218,7 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
   const section = html.match(/<section class="section section--projects"[\s\S]*?<\/section>/)?.[0] || "";
   const projectLinks = [...section.matchAll(/<a\b[^>]*class="project-link"[^>]*>/g)]
     .map((match) => attributes(match[0]))
-    .filter((link) => link.href?.startsWith("https://"));
+    .filter((link) => link.href?.startsWith("https://github.com/"));
   const rows = [...section.matchAll(/<article class="project-row"[^>]*>([\s\S]*?)<\/article>/g)]
     .map((match) => match[1]);
   const expectedLinks = [
@@ -229,7 +265,7 @@ test("PRJ-02 P0: private projects expose honest status and contact instead of br
   assert.doesNotMatch(section, /github\.com\/vinnitog\/(?:VerbaJus|Casa-dos-Coleus)/,
     "anonymous visitors must not be sent to private repository 404 pages");
   assert.equal((section.match(/data-i18n="projects\.private"/g) || []).length, 2);
-  assert.equal((section.match(/href="mailto:vinnitog@gmail\.com"/g) || []).length, 2);
+  assert.equal((section.match(/href="https:\/\/mail\.google\.com\/mail\/\?[^\"]+"/g) || []).length, 2);
   assert.match(privateActions[0], /data-i18n-aria-label="projects\.verbaContact"/);
   assert.match(privateActions[1], /data-i18n-aria-label="projects\.coleusContact"/);
   for (const action of privateActions) {
