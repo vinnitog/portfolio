@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "portfolio-v";
-const CACHE_NAME = "portfolio-v25";
+const CACHE_NAME = "portfolio-v26";
 const APP_SHELL = [
   "./",
   "./index.html",

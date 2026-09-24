@@ -47,7 +47,7 @@ O diferencial confirmado é a combinação de Quality Engineering, automação e
 - O wordmark, as âncoras internas do menu, o skip link e “Voltar ao início” navegam no documento atual. O retorno pelo rodapé limpa o estado da seção anterior e restaura foco visível no wordmark. Perfis, repositórios, email e demais links externos abrem em nova aba com `noreferrer`.
 - Os links externos devem abrir os perfis e repositórios públicos reais fornecidos pelo usuário. Projetos privados devem ser identificados com clareza e oferecer contato pelo compositor web do Gmail, já endereçado a `vinnitog@gmail.com`, sem encaminhar visitantes para páginas 404.
 - Divisores editoriais devem atravessar a viewport com traço pontilhado e um X terminal.
-- O app shell `portfolio-v25` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
+- O app shell `portfolio-v26` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
 - Não inventar métricas, clientes, depoimentos ou resultados comerciais.
 - O blog é uma evolução futura e não faz parte desta primeira entrega.
 
@@ -68,7 +68,7 @@ O diferencial confirmado é a combinação de Quality Engineering, automação e
 - Perfil GitHub: https://github.com/vinnitog
 - Case TX Raio-X: https://github.com/vinnitog/TX-Raio-X — PWA para traduzir transações EVM, com Supabase Auth, ledger de créditos, Edge Functions, Mercado Pago em ambiente de teste, controles de segurança e testes.
 - Case RDP Pro: https://github.com/vinnitog/RDP-Pro — PWA B2B para Registro de Pensamentos em TCC, com experiências distintas para paciente e psicólogo, convites, autenticação, RLS, Edge Functions e compatibilidade de rotas.
-- Case VerbaJus: https://github.com/vinnitog/VerbaJus — PWA pronta para uso voltada a cálculos trabalhistas, com autenticação, casos protegidos no Supabase, memória por rubrica, 30 modelos em glossário, assinaturas Stripe, Edge Functions e Sentry. Repositório privado no momento da verificação.
+- Case VerbaJus: https://github.com/vinnitog/VerbaJus — PWA pronta para uso voltada a cálculos trabalhistas, com autenticação, casos protegidos no Supabase, memória por rubrica, 30 modelos em glossário, assinaturas Stripe, Edge Functions e Sentry. Repositório privado no momento da verificação. Conforme atualização do usuário em 2026-09-24, possui versões web e mobile; a versão mobile será submetida à Google Play Store em breve, sem alegação de publicação ou aprovação atual.
 - Projeto Togs Heads Up: https://github.com/vinnitog/togs-heads-up — dashboard PWA em React/Vite para clima, alertas regionais, notícias de Marília-SP e registros de bolas de fogo da NASA/JPL, com estados independentes por fonte.
 - Projeto Jogos de Hoje: https://github.com/vinnitog/jogos-de-hoje — PWA mobile-first em JavaScript para agenda, placares, transmissões e competições, com Service Worker e degradação offline.
 - Projeto Casa dos Coleus: https://github.com/vinnitog/Casa-dos-Coleus — MVP Node.js de atendimento por regras, catálogo configurável, painel protegido, base para WhatsApp Cloud API e cotações Jadlog. Repositório privado no momento da verificação.

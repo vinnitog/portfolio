@@ -308,7 +308,7 @@ O runner é um personagem pixel art decorativo composto por três PNGs de 288 ×
 - **Direction & Progress:** a posição horizontal acompanha `scrollY / scrollRange` dentro da largura real do header; deltas maiores que 1 invertem direção, trail e sprite.
 - **Scheduling:** scroll passivo e resize compartilham um único `requestAnimationFrame`; o estado `is-running` termina 160ms após o último render.
 - **Reduced Motion:** quando `prefers-reduced-motion: reduce` está ativo, o setup não registra listeners e o CSS remove o runner por completo.
-- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v25`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
+- **Offline:** os três PNGs e os demais arquivos essenciais pertencem ao app shell `portfolio-v26`; cada frame mantém proveniência individual e a limpeza preserva caches externos ao namespace `portfolio-v`.
 
 ## Do's and Don'ts
 

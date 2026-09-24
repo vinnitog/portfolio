@@ -283,6 +283,26 @@ test("UX9-I18N-02 P0: PT and EN dictionaries have parity and cover the HTML cont
   }
 });
 
+test("PRJ-03 P1: VerbaJus platforms and upcoming store submission remain accurate in PT, EN and no-JS fallback", () => {
+  const harness = createHarness();
+  const description = harness.translated.find((element) => element.dataset.i18n === "projects.verbaBody");
+  const fallback = html.match(/<p\b[^>]*data-i18n="projects\.verbaBody"[^>]*>([\s\S]*?)<\/p>/)?.[1];
+
+  assert.ok(description, "the featured project must render its localized description");
+  assert.equal(fallback, description.textContent, "the no-JS fallback must match the default PT copy");
+  assert.match(description.textContent, /versões web e mobile/);
+  assert.match(description.textContent, /submissão da versão mobile à Google Play Store prevista para breve/);
+  assert.doesNotMatch(description.textContent, /(?:disponível|publicad[ao]|lançad[ao]|aprovad[ao])\s+(?:na|pela)\s+(?:Google\s+)?Play Store/i);
+
+  harness.en.dispatch("click");
+  assert.match(description.textContent, /web and mobile versions/);
+  assert.match(description.textContent, /mobile version scheduled for submission to the Google Play Store soon/);
+  assert.doesNotMatch(description.textContent, /(?:available|published|released|approved)\s+(?:on|in|by)\s+(?:the\s+)?(?:Google\s+)?Play Store/i);
+
+  harness.pt.dispatch("click");
+  assert.equal(description.textContent, fallback, "returning to PT must retain the future-submission wording");
+});
+
 test("UX9-ROUTE-01..05/I18N-03 P0: each activation moves evidence to its node and language preserves stage", () => {
   const harness = createHarness();
   const centers = [];
@@ -429,16 +449,16 @@ test("UX9-MOBILE-01/02 P0/P1: preference controls stay in the responsive navigat
   assert.match(css, /\.header-controls\s*\{[\s\S]*?display:\s*flex/s);
 });
 
-test("SW25-01 P0: v25 precaches the atomic localized/themed app shell", () => {
+test("SW26-01 P0: v26 precaches the atomic localized/themed app shell", () => {
   assert.match(swSource, /const CACHE_PREFIX = "portfolio-v"/);
-  assert.match(swSource, /const CACHE_NAME = "portfolio-v25"/);
+  assert.match(swSource, /const CACHE_NAME = "portfolio-v26"/);
   const shell = swSource.match(/const APP_SHELL = \[([\s\S]*?)\];/)?.[1] || "";
   for (const entry of [
     "./index.html", "./styles.css", "./script.js", "./manifest.webmanifest",
     "./assets/icon.svg", "./assets/avatar-vinicius-128.jpg",
     "./assets/fonts/archivo-latin.woff2", "./assets/fonts/manrope-latin.woff2",
     "./assets/scroll-runner.png", "./assets/scroll-runner-frame-2.png", "./assets/scroll-runner-frame-3.png"
-  ]) assert.ok(shell.includes(`"${entry}"`), `missing v25 app-shell entry: ${entry}`);
+  ]) assert.ok(shell.includes(`"${entry}"`), `missing v26 app-shell entry: ${entry}`);
   assert.match(swSource, /key\.startsWith\(CACHE_PREFIX\) && key !== CACHE_NAME/);
   assert.match(swSource, /self\.skipWaiting\(\)/);
   assert.match(swSource, /self\.clients\.claim\(\)/);

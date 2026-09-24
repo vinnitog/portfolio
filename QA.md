@@ -1,8 +1,10 @@
 # Estratégia de Qualidade — Portfolio
 
-Atualizado em 2026-09-24 para a inclusão de TechTogs, Max Quality Intelligence, Prospecta Hub e Prumo, com conteúdo PT/EN, contatos via Gmail, seção compacta de dez projetos e app shell `portfolio-v25`. Os contratos de navegação, pipeline, runner, temas, CI e GitHub Pages permanecem na regressão.
+Atualizado em 2026-09-24 para a inclusão de TechTogs, Max Quality Intelligence, Prospecta Hub e Prumo, com conteúdo PT/EN, contatos via Gmail, seção compacta de dez projetos e app shell `portfolio-v26`. Os contratos de navegação, pipeline, runner, temas, CI e GitHub Pages permanecem na regressão.
 
 ## Escopo e riscos
+
+O destaque VerbaJus também informa versões web e mobile e a submissão futura à Google Play Store. A regressão deve validar PT, EN e fallback sem JavaScript, sem afirmar publicação ou aprovação na loja.
 
 - Conteúdo PT-BR padrão e tradução integral para inglês americano.
 - Tema escuro padrão e tema claro persistente.
@@ -43,8 +45,8 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 | AX-01 ★ | P0 | Node | Validar landmarks, IDs, headings, ARIA e elementos decorativos. | Um `h1.sr-only`; referências resolvidas; SVGs/runner não duplicam conteúdo assistivo. |
 | CT-01 ★ | P0 | Node | Conferir fatos, links, email e ausência de claims inventados. | Conteúdo aprovado permanece; não entram métricas, prêmios ou resultados sem fonte. |
 | CI-01 ★ | P0 | Node | Inspecionar gatilhos e permissões do workflow de validação. | Push em `develop` e PR para `main` executam a suíte com acesso somente de leitura e sem permissão de deploy. |
-| SW25-01 ★ | P0 | Unit SW | Instalar `portfolio-v25` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
-| SW25-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
+| SW26-01 ★ | P0 | Unit SW | Instalar `portfolio-v26` em cache vazio. | `addAll` precede `skipWaiting`; app shell contém HTML/CSS/JS, manifest, ícones, avatar, fontes e três frames. |
+| SW26-02 ★ | P0 | Unit SW | Ativar sobre cache anterior e responder offline. | Somente caches antigos `portfolio-v*` são removidos; caches de outros projetos permanecem, clientes são reivindicados e respostas cacheadas dispensam rede. |
 | VP-390 | P0 | Manual visual | Percorrer a página e operar menu, pipeline, preferências, projetos e contato. | Sem corte, sobreposição impeditiva ou scroll horizontal; alvos e foco continuam alcançáveis. |
 | VP-1440 | P0 | Manual visual | Operar oito etapas e scroll no primeiro viewport. | Pipeline horizontal, card e runner permanecem alinhados e não competem com o conteúdo/menu. |
 
@@ -53,9 +55,9 @@ Riscos prioritários: sobreposição do card com rótulos, overflow em PT/EN, ru
 ## Estado automatizado
 
 - Comando preferencial no Windows: `.\test.cmd`.
-- Resultado final desta mudança: **78/78 testes passando**.
+- Resultado final desta mudança: **79/79 testes passando**.
 - `node --check script.js` e `node --check tools\visual-check.mjs` passam.
-- A suíte cobre pipeline, i18n, temas, seção compacta de dez projetos, workflows de CI e GitHub Pages, navegação interna do menu/rodapé, contatos pelo Gmail, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v25`.
+- A suíte cobre pipeline, i18n, temas, seção compacta de dez projetos, workflows de CI e GitHub Pages, navegação interna do menu/rodapé, contatos pelo Gmail, alinhamento do hero, rotas divisórias curvas, três frames, faixa e bounds do header, reduced motion e `portfolio-v26`.
 
 ## Validação manual pendente
 
@@ -67,5 +69,5 @@ Na verificação de 2026-09-24, VerbaJus, Casa dos Coleus, Max Quality Intellige
 
 - Todos os P0 automatizados passam e não há regressão P1 conhecida.
 - Nenhum artefato vigente menciona pipeline de quatro nós, endpoints antigos, runner fixo, idle de 140 ms ou cache anterior como vigente.
-- App shell v25 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
+- App shell v26 instala atomicamente com os três frames disponíveis offline e preserva caches sem o namespace do portfólio.
 - Mudanças permanecem limitadas ao pedido e a documentação acompanha o comportamento entregue.
