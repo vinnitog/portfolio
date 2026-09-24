@@ -47,7 +47,7 @@ O diferencial confirmado é a combinação de Quality Engineering, automação e
 - O wordmark, as âncoras internas do menu, o skip link e “Voltar ao início” navegam no documento atual. O retorno pelo rodapé limpa o estado da seção anterior e restaura foco visível no wordmark. Perfis, repositórios, email e demais links externos abrem em nova aba com `noreferrer`.
 - Os links externos devem abrir os perfis e repositórios públicos reais fornecidos pelo usuário. Projetos privados devem ser identificados com clareza e oferecer contato pelo compositor web do Gmail, já endereçado a `vinnitog@gmail.com`, sem encaminhar visitantes para páginas 404.
 - Divisores editoriais devem atravessar a viewport com traço pontilhado e um X terminal.
-- O app shell `portfolio-v24` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
+- O app shell `portfolio-v25` deve manter os três frames do runner disponíveis offline e limpar somente versões antigas com o namespace `portfolio-v`.
 - Não inventar métricas, clientes, depoimentos ou resultados comerciais.
 - O blog é uma evolução futura e não faz parte desta primeira entrega.
 
@@ -72,6 +72,11 @@ O diferencial confirmado é a combinação de Quality Engineering, automação e
 - Projeto Togs Heads Up: https://github.com/vinnitog/togs-heads-up — dashboard PWA em React/Vite para clima, alertas regionais, notícias de Marília-SP e registros de bolas de fogo da NASA/JPL, com estados independentes por fonte.
 - Projeto Jogos de Hoje: https://github.com/vinnitog/jogos-de-hoje — PWA mobile-first em JavaScript para agenda, placares, transmissões e competições, com Service Worker e degradação offline.
 - Projeto Casa dos Coleus: https://github.com/vinnitog/Casa-dos-Coleus — MVP Node.js de atendimento por regras, catálogo configurável, painel protegido, base para WhatsApp Cloud API e cotações Jadlog. Repositório privado no momento da verificação.
+- Projetos recentes verificados pelos READMEs e metadados do GitHub em 2026-09-24:
+  - TechTogs: https://github.com/vinnitog/techtogs-landing-page — landing page responsiva em HTML/CSS/JavaScript, com servidor Node.js e formulário demonstrativo no GitHub Pages. Repositório público.
+  - Max Quality Intelligence: repositório privado `max-quality-inteligence` — esteira local de QA em Python/SQLite, com painel, CLI, histórico, adaptadores e integração com GitHub Actions. Não apresenta integração LLM como recurso implementado.
+  - Prospecta Hub: https://github.com/vinnitog/prospecta-hub — CRM sem login, dados locais, backups JSON e busca em fontes públicas; versão de navegador e servidor Node.js/SQLite. Repositório público.
+  - Prumo: repositório privado `inventory-control` — controle de estoque para pequenas lojas com permissões, histórico e relatórios, Node.js/PostgreSQL/PGlite e versão Windows offline.
 - Texto profissional, experiência atual e lista de competências fornecidos diretamente pelo usuário.
 - Avatar quadrado aprovado pelo usuário, versionado em `assets/avatar-vinicius.jpg` e destinado ao hero e aos metadados sociais do portfólio.
 - Três frames 288 × 192 do runner, com proveniência individual: `assets/scroll-runner.png`, `assets/scroll-runner-frame-2.png` e `assets/scroll-runner-frame-3.png`.

@@ -429,16 +429,16 @@ test("UX9-MOBILE-01/02 P0/P1: preference controls stay in the responsive navigat
   assert.match(css, /\.header-controls\s*\{[\s\S]*?display:\s*flex/s);
 });
 
-test("SW24-01 P0: v24 precaches the atomic localized/themed app shell", () => {
+test("SW25-01 P0: v25 precaches the atomic localized/themed app shell", () => {
   assert.match(swSource, /const CACHE_PREFIX = "portfolio-v"/);
-  assert.match(swSource, /const CACHE_NAME = "portfolio-v24"/);
+  assert.match(swSource, /const CACHE_NAME = "portfolio-v25"/);
   const shell = swSource.match(/const APP_SHELL = \[([\s\S]*?)\];/)?.[1] || "";
   for (const entry of [
     "./index.html", "./styles.css", "./script.js", "./manifest.webmanifest",
     "./assets/icon.svg", "./assets/avatar-vinicius-128.jpg",
     "./assets/fonts/archivo-latin.woff2", "./assets/fonts/manrope-latin.woff2",
     "./assets/scroll-runner.png", "./assets/scroll-runner-frame-2.png", "./assets/scroll-runner-frame-3.png"
-  ]) assert.ok(shell.includes(`"${entry}"`), `missing v22 app-shell entry: ${entry}`);
+  ]) assert.ok(shell.includes(`"${entry}"`), `missing v25 app-shell entry: ${entry}`);
   assert.match(swSource, /key\.startsWith\(CACHE_PREFIX\) && key !== CACHE_NAME/);
   assert.match(swSource, /self\.skipWaiting\(\)/);
   assert.match(swSource, /self\.clients\.claim\(\)/);

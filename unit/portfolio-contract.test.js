@@ -77,6 +77,10 @@ test("CT-01 P0: essential approved content is present", () => {
     "Automação",
     "Entrega",
     "VerbaJus",
+    "TechTogs",
+    "Max Quality Intelligence",
+    "Prospecta Hub",
+    "Prumo",
     "TX Raio-X",
     "RDP Pro",
     "Togs Heads Up",
@@ -105,6 +109,8 @@ test("CT-03 P0: external destinations are exact and new tabs are safe", () => {
   const expected = [
     "https://www.linkedin.com/in/vin%C3%ADcius-tognoli-8b028765/",
     "https://github.com/vinnitog",
+    "https://github.com/vinnitog/techtogs-landing-page",
+    "https://github.com/vinnitog/prospecta-hub",
     "https://github.com/vinnitog/TX-Raio-X",
     "https://github.com/vinnitog/RDP-Pro",
     "https://github.com/vinnitog/togs-heads-up",
@@ -168,11 +174,13 @@ test("MAIL-01 P0: project and general contact actions open addressed Gmail draft
     .map((match) => attributes(match[0]));
   const expectedSubjects = [
     "Contato sobre o VerbaJus",
+    "Contato sobre o Max Quality Intelligence",
+    "Contato sobre o Prumo",
     "Contato sobre a Casa dos Coleus",
     "Contato pelo portfólio"
   ];
 
-  assert.equal(links.length, 3, "the two private projects and contact email should open Gmail compose");
+  assert.equal(links.length, 5, "the four private projects and contact email should open Gmail compose");
   assert.deepEqual(links.map((link) => {
     const destination = new URL(link.href.replaceAll("&amp;", "&"));
     return {
@@ -211,7 +219,7 @@ test("IA-PIPELINE-01 P0: retired route endpoints, CTAs and Ricochet360 period le
     "the factual employment date remains in the narrative without a redundant period element");
 });
 
-test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editorial ledger", () => {
+test("PRJ-01 P0/P1: projects use one featured case and a compact nine-row editorial ledger", () => {
   const html = read("index.html");
   const css = read("styles.css");
   const script = read("script.js");
@@ -222,6 +230,8 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
   const rows = [...section.matchAll(/<article class="project-row"[^>]*>([\s\S]*?)<\/article>/g)]
     .map((match) => match[1]);
   const expectedLinks = [
+    ["https://github.com/vinnitog/techtogs-landing-page", "projects.techtogsRepository"],
+    ["https://github.com/vinnitog/prospecta-hub", "projects.prospectaRepository"],
     ["https://github.com/vinnitog/TX-Raio-X", "projects.txRepository"],
     ["https://github.com/vinnitog/RDP-Pro", "projects.rdpRepository"],
     ["https://github.com/vinnitog/togs-heads-up", "projects.headsUpRepository"],
@@ -229,21 +239,22 @@ test("PRJ-01 P0/P1: projects use one featured case and a compact five-row editor
   ];
 
   assert.equal((section.match(/class="project-feature"/g) || []).length, 1);
-  assert.equal((section.match(/class="project-row"/g) || []).length, 5);
+  assert.equal((section.match(/class="project-row"/g) || []).length, 9);
   assert.deepEqual(projectLinks.map((link) => [link.href, link["data-i18n-aria-label"]]), expectedLinks,
     "each project must preserve its repository destination and localized accessible name");
   assert.deepEqual(rows.map((row) => row.match(/<h3>([^<]+)<\/h3>/)?.[1]), [
+    "TechTogs", "Max Quality Intelligence", "Prospecta Hub", "Prumo",
     "TX Raio-X", "RDP Pro", "Togs Heads Up", "Jogos de Hoje", "Casa dos Coleus"
-  ], "the compact ledger must keep the approved five-project order");
+  ], "the compact ledger must present recent projects first and preserve the prior project order");
   assert.match(section, /class="project-ledger" role="list"/);
-  assert.equal((section.match(/role="listitem"/g) || []).length, 5);
-  assert.equal((section.match(/data-i18n-aria-label="projects\.[A-Za-z]+Repository"/g) || []).length, 4);
+  assert.equal((section.match(/role="listitem"/g) || []).length, 9);
+  assert.equal((section.match(/data-i18n-aria-label="projects\.[A-Za-z]+Repository"/g) || []).length, 6);
   assert.match(section, /class="project-feature"[\s\S]*?VerbaJus[\s\S]*?projects\.ready/);
   assert.match(section, /data-i18n="projects\.summary">Um case principal e um índice direto/,
     "the no-JS fallback must match the current Portuguese project summary");
   assert.doesNotMatch(section, /case-study|case-diagram/);
 
-  for (const key of ["verbaTitle", "verbaBody", "featureLabel", "ready", "ledgerLabel", "headsUpBody", "headsUpStack", "gamesBody", "coleusBody", "coleusStack", "private", "contactProject", "verbaContact", "coleusContact"]) {
+  for (const key of ["verbaTitle", "verbaBody", "featureLabel", "ready", "ledgerLabel", "techtogsBody", "techtogsRepository", "mqiBody", "mqiContact", "prospectaBody", "prospectaRepository", "prumoBody", "prumoContact", "headsUpBody", "headsUpStack", "gamesBody", "coleusBody", "coleusStack", "private", "contactProject", "verbaContact", "coleusContact"]) {
     assert.match(script, new RegExp(`"projects\\.${key}"\\s*:`), `missing project translation: ${key}`);
   }
   assert.match(css, /\.section--projects\s*\{[\s\S]*?padding-top:\s*clamp\(5rem, 8vw, 7rem\)/s);
@@ -261,13 +272,15 @@ test("PRJ-02 P0: private projects expose honest status and contact instead of br
   const privateActions = [...section.matchAll(/<div class="project-access project-access--private">([\s\S]*?)<\/div>/g)]
     .map((match) => match[1]);
 
-  assert.equal(privateActions.length, 2, "VerbaJus and Casa dos Coleus must be identified as private");
-  assert.doesNotMatch(section, /github\.com\/vinnitog\/(?:VerbaJus|Casa-dos-Coleus)/,
+  assert.equal(privateActions.length, 4, "VerbaJus, Max Quality Intelligence, Prumo and Casa dos Coleus must be identified as private");
+  assert.doesNotMatch(section, /github\.com\/vinnitog\/(?:VerbaJus|Casa-dos-Coleus|max-quality-inteligence|inventory-control)/i,
     "anonymous visitors must not be sent to private repository 404 pages");
-  assert.equal((section.match(/data-i18n="projects\.private"/g) || []).length, 2);
-  assert.equal((section.match(/href="https:\/\/mail\.google\.com\/mail\/\?[^\"]+"/g) || []).length, 2);
+  assert.equal((section.match(/data-i18n="projects\.private"/g) || []).length, 4);
+  assert.equal((section.match(/href="https:\/\/mail\.google\.com\/mail\/\?[^\"]+"/g) || []).length, 4);
   assert.match(privateActions[0], /data-i18n-aria-label="projects\.verbaContact"/);
-  assert.match(privateActions[1], /data-i18n-aria-label="projects\.coleusContact"/);
+  assert.match(privateActions[1], /data-i18n-aria-label="projects\.mqiContact"/);
+  assert.match(privateActions[2], /data-i18n-aria-label="projects\.prumoContact"/);
+  assert.match(privateActions[3], /data-i18n-aria-label="projects\.coleusContact"/);
   for (const action of privateActions) {
     assert.match(action, /target="_blank"/);
     assert.match(action, /rel="noreferrer"/);
