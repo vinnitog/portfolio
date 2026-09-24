@@ -19,7 +19,7 @@ Recrutadores, lideranças de engenharia, times de produto e potenciais colaborad
 - Interface visual: Sim
 - Login/autenticacao: Nao
 - Banco de dados: Nao
-- Offline/PWA: Sim, com app shell estatico instalavel `portfolio-v24` e navegacao principal disponivel offline
+- Offline/PWA: Sim, com app shell estatico instalavel `portfolio-v26` e navegacao principal disponivel offline
 - Mobile: Sim
 - Dashboard/graficos: Nao
 - API propria: Nao
@@ -89,6 +89,7 @@ git diff --check
 - Secoes editoriais sao separadas por caminhos curvos e tracejados full-width, inspirados em mapas do tesouro e finalizados por um X terminal.
 - Runner pixel art decorativo com tres frames 288 x 192 em uma faixa exclusiva na linha inferior do header, sem cruzar os textos do menu, guiado por progresso e direcao do scroll, com RAF compartilhado, idle de 160 ms e remocao completa sob `prefers-reduced-motion: reduce`.
 - O wordmark, as ancoras internas do menu, o skip link e "Voltar ao inicio" navegam no documento atual. Ao retornar pelo rodape, o tracking limpa a secao anterior e o foco volta ao wordmark visivel. Perfis, repositorios, email e demais links externos abrem em nova aba com `noreferrer`. Os contatos abrem o compositor web do Gmail ja enderecado a `vinnitog@gmail.com`, com assunto contextual.
-- A secao Projetos usa um unico case principal para o VerbaJus, pronto para uso, seguido por um indice editorial compacto com TX Raio-X, RDP Pro, Togs Heads Up, Jogos de Hoje e Casa dos Coleus. Repositorios publicos permanecem externos e seguros; VerbaJus e Casa dos Coleus sao identificados como privados e oferecem contato sem encaminhar visitantes para paginas 404.
-- App shell `portfolio-v24` precacheia os tres PNGs do runner e seus demais assets essenciais; cada PNG tem arquivo de proveniencia. A ativacao remove somente caches antigos com o prefixo `portfolio-v`, preservando caches de outros projetos na mesma origem GitHub Pages.
+- A secao Projetos usa um unico case principal para o VerbaJus, pronto para uso, seguido por nove linhas editoriais: TechTogs, Max Quality Intelligence, Prospecta Hub, Prumo, TX Raio-X, RDP Pro, Togs Heads Up, Jogos de Hoje e Casa dos Coleus. Os quatro projetos recentes foram conferidos nos READMEs e metadados do GitHub em 2026-09-24; o nome publico Prumo corresponde ao repositorio inventory-control. Repositorios publicos permanecem externos e seguros; VerbaJus, Max Quality Intelligence, Prumo e Casa dos Coleus sao identificados como privados e oferecem contato sem encaminhar visitantes para paginas 404.
+- VerbaJus informa versões web e mobile em PT/EN, com submissão mobile à Google Play Store prevista para breve, conforme informado pelo usuário. Não há indicação de que já esteja publicado na loja.
+- App shell `portfolio-v26` precacheia os tres PNGs do runner e seus demais assets essenciais; cada PNG tem arquivo de proveniencia. A ativacao remove somente caches antigos com o prefixo `portfolio-v`, preservando caches de outros projetos na mesma origem GitHub Pages.
 
